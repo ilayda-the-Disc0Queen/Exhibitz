@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_25_144742) do
+ActiveRecord::Schema.define(version: 2020_05_25_151941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.text "info"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exhibits", force: :cascade do |t|
+    t.string "name"
+    t.string "start_date"
+    t.string "close_date"
+    t.integer "price"
+    t.string "booking_website"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "museum_id", null: false
+    t.index ["museum_id"], name: "index_exhibits_on_museum_id"
+  end
+
+  create_table "museums", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "website"
+    t.text "info"
+    t.text "opening_hours"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,4 +60,5 @@ ActiveRecord::Schema.define(version: 2020_05_25_144742) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "exhibits", "museums"
 end
