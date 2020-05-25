@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :favourites
   has_many :exhibits, through: :favourites
+  has_many :bookings
+  has_many :exhibits, through: :bookings
 end
