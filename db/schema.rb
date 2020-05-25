@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_25_151133) do
+ActiveRecord::Schema.define(version: 2020_05_25_170120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 2020_05_25_151133) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "exhibit_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exhibit_id"], name: "index_bookings_on_exhibit_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "exhibit_artists", id: false, force: :cascade do |t|
+    t.bigint "exhibit_id", null: false
+    t.bigint "artist_id", null: false
+    t.index ["exhibit_id", "artist_id"], name: "index_exhibit_artists_on_exhibit_id_and_artist_id"
+  end
+
   create_table "exhibits", force: :cascade do |t|
     t.string "name"
     t.string "start_date"
@@ -31,6 +46,17 @@ ActiveRecord::Schema.define(version: 2020_05_25_151133) do
     t.string "booking_website"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "museum_id", null: false
+    t.index ["museum_id"], name: "index_exhibits_on_museum_id"
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "exhibit_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exhibit_id"], name: "index_favourites_on_exhibit_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
   create_table "museums", force: :cascade do |t|
@@ -58,4 +84,9 @@ ActiveRecord::Schema.define(version: 2020_05_25_151133) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "exhibits"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "exhibits", "museums"
+  add_foreign_key "favourites", "exhibits"
+  add_foreign_key "favourites", "users"
 end
