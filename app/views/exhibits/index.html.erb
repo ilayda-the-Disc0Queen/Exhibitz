@@ -1,1 +1,30 @@
-<h1>Exhibit home page</h1>
+<h1>Exhibits Index & Home Page</h1>
+
+<div class="exhibits">
+
+  <% @exhibits.each do |exhibit| %>
+
+    <div class="exhibit-card">
+      <div class="exhibit-image">
+        <%= link_to image_tag("https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"), exhibit_path(exhibit) %>
+      </div>
+
+      <div class="exhibit-info">
+
+        <div class="exhibit-info-left">
+          <p><%= exhibit.name %></p>
+          <p>Museum ID: <%= exhibit.museum_id %></p>
+        </div>
+
+        <div class="exhibit-info-right">
+          <p>£<%= exhibit.price %></p>
+          <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>

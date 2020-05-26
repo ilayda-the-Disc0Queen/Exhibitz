@@ -1,2 +1,38 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.exhibits {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.exhibit-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px;
+  width: 35%;
+  overflow: hidden;
+}
+
+.exhibit-image img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  }
+
+.exhibit-info {
+  padding: 15px;
+}
+
+.exhibit-info-right {
+  float: right;
+  text-align: right;
+}
+
+.exhibit-info-left {
+  float: left;
+  text-align: left;
+}
+
