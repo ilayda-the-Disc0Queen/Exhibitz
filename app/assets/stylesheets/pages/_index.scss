@@ -11,13 +11,13 @@
 .exhibit-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 20px;
+  margin: 10px;
   width: 35%;
   overflow: hidden;
 }
 
 .exhibit-image img{
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   }
@@ -39,4 +39,68 @@
 
 h5 {
   text-align: center;
+}
+
+// SHOW PAGE
+
+.exhibit-show-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 10px;
+  width: 80%;
+  overflow: hidden;
+}
+
+.image-show {
+  width: 80%;
+  height: 500px;
+  text-align: center;
+  margin: 10px;
+}
+
+.image-show img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-the-artist {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 10px;
+  width: 80%;
+  overflow: hidden;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.booking-button {
+  width: 80%;
+  margin: 10px;
+}
+
+.image-carousel {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: contain;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+h1 {
+  margin: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+
 }
