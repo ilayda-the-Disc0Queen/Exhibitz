@@ -29,6 +29,7 @@
 .exhibit-info-right {
   float: right;
   text-align: right;
+  position: relative;
 }
 
 .exhibit-info-left {
@@ -36,3 +37,6 @@
   text-align: left;
 }
 
+h5 {
+  text-align: center;
+}
