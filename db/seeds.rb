@@ -13,9 +13,9 @@ Museum.create(name: 'Science Museum', address: 'Exhibition Rd, South Kensington,
 Museum.create(name: 'London Transport Museum', address: 'Covent Garden, London WC2E 7BB', website: 'https://www.ltmuseum.co.uk', info: 'Info about London Transport Museum', opening_hours: '10AM - 6PM', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590494612/transport_museum_pj9igi.jpg')
 
 Exhibit.create(name: 'Dora Maurer', start_date: '05/08/2019', close_date: '05/07/2020', price: '0', booking_website: 'https://www.tate.org.uk/whats-on/tate-modern/exhibition/dora-maurer', museum_id: 1)
-Exhibit.create(name: 'Sneakers Unboxed: Studio to Street', start_date: '20/06/2020', close_date: '30/09/2020' price: '0', booking_website: 'https://designmuseum.org/exhibitions/sneakers-unboxed-studio-to-street', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590495113/sneakers_bcy8sk.jpg')
-Exhibit.create(name: 'Prada. Front and Back', start_date: '01/07/2020', close_date: '20/10/2020',price: '£8', booking_website: 'https://designmuseum.org/exhibitions/prada-front-and-back', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590495902/prada_dwzy42.jpg')
-Exhibit.create(name: 'Léon Spilliaert', start_date: '23/02/2020', close_date: '20/09/2020', price: '£14', booking_website: 'https://www.royalacademy.org.uk/exhibition/leon-spilliaert', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496063/L%C3%A9on_Spilliaert_-_Self_Portrait_-_Met_-_1980.208_fzncxx.jpg')
+Exhibit.create(name: 'Sneakers Unboxed: Studio to Street', start_date: '20/06/2020', close_date: '30/09/2020', price: '0', booking_website: 'https://designmuseum.org/exhibitions/sneakers-unboxed-studio-to-street', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590495113/sneakers_bcy8sk.jpg', museum_id: 1)
+Exhibit.create(name: 'Prada. Front and Back', start_date: '01/07/2020', close_date: '20/10/2020',price: '£8', booking_website: 'https://designmuseum.org/exhibitions/prada-front-and-back', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590495902/prada_dwzy42.jpg', museum_id: 1)
+Exhibit.create(name: 'Léon Spilliaert', start_date: '23/02/2020', close_date: '20/09/2020', price: '£14', booking_website: 'https://www.royalacademy.org.uk/exhibition/leon-spilliaert', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496063/L%C3%A9on_Spilliaert_-_Self_Portrait_-_Met_-_1980.208_fzncxx.jpg', museum_id: 1)
 
 Artist.create(name: 'Dora Maurer', info: 'Hungarian born 1937', category: 'Modern, Multimedia')
 
