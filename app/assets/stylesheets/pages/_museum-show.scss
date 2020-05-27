@@ -1,0 +1,34 @@
+.museum {
+  
+}
+
+.museum-image img{
+  margin-top: 16px;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.museum-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-website {
+  display: block;
+  text-align: left;
+}
+
+.exhibit-details {
+  display: flex;
+  justify-content: space-between;
+  // float: left;
+  text-align: center;
+  // position: relative;
+  padding-bottom: 0;
+}
+
+.dates{
+  display: block;
+  text-align: left;
+}
