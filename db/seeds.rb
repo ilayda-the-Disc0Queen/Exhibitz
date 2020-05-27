@@ -48,10 +48,21 @@
 # Artist.create(name: 'David Hockney', info: 'British born 1937', category: 'Pop art, Cubism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496937/david-hockney_lzkpdw.jpg')
 
 
+# puts "Creating artists..."
+# ARTISTS
+# exhibit_1.artists.create(name: 'Dora Maurer', info: 'Hungarian born 1937', category: 'Modern, Multimedia', image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590574751/kinga-cichewicz-T5qJdkPwCgE-unsplash_pxraop.jpg")
+# exhibit_2.artists.create(name: 'Michael Abberley', info: 'British artist 1947-2008', category: 'Pottery designer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590499785/halanna-halila-baDpsfyw6q4-unsplash_tdqbg3.jpg')
+# exhibit_3.artists.create(name: 'George Gammon Adams', info: '(1821-1898). The portrait sculptor and medallist George Gammon Adams studied at the Royal Academy Schools from 1840, and spent a further year studying in Rome under John Gibson six years later.', category: 'Sculptor', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500566/daniel-robert-I3z6YXsIfIM-unsplash_ywbqv7.jpg')
+# exhibit_4.artists.create(name: 'Léon Spilliaert', info: 'Belgian born 1881', category: 'Symbolism, Expressionism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496063/L%C3%A9on_Spilliaert_-_Self_Portrait_-_Met_-_1980.208_fzncxx.jpg')
+# exhibit_5.artists.create(name: 'Lorenzo Agius', info: '(1962-) Agius studied Art and Art History at the University of East Anglia, moved to London in 1983 and started to assist in photography.', category: 'Photographer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500643/angello-pro-IegYaCY101s-unsplash_d3rd2m.jpg' )
+# exhibit_6.artists.create(name: 'Geoffrey Clarke', info: 'British 1924–2014', category: 'Sculpture, Ecclesiastical art', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590497135/jen-theodore-9Q_C6rXHQjk-unsplash_xueqwl.jpg')
+# exhibit_6.artists.create(name: 'David Hockney', info: 'British born 1937', category: 'Pop art, Cubism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496937/david-hockney_lzkpdw.jpg')
+# exhibit_7.artists.create(name: 'James Abbe', info: '(1883-1973). Abbe started his career in New York and Hollywood, making Paris his base in the 1920s with a studio in the same road as Man Ray.', category: 'Photographer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500434/james-coleman-IboveVcO7r8-unsplash_vypmd3.jpg')
+# exhibit_8.artists.create(name: "Jotaro Saito", info: "Having begun his career designing both western clothing and kimono, at the age of 27, Jotaro Saito made the decision to concentrate solely on the latter. The experience gained through designing western styles greatly influenced the direction of his kimono.", category: "Fashion", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590499623/JOTAROSAITO_portrait_tgyypj.jpg")
+# exhibit_9.artists.create(name: "Imma Ramos", info: "Imma Ramos is curator of the South Asia collections at the British Museum in London. Her research interests revolve around the relationship between religion, politics and gender in South Asian visual culture.", category: "Asian", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590500092/kim-jones-EcldzGBAB0A-unsplash_aoq7cn.jpg")
+# exhibit_10.artists.create(name: "László Francsics", info: "László Francsics, president of the Association of Hungarian Astrophotographers, has won three awards with his photographs in this years’ Astronomy Photographer of the Year 2019.", category: "Photography", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590500500/alasdair-elmes-jQR05LubOgw-unsplash_pkfoeb.jpg")
 
-
-
-
+#########
 
 
 
@@ -111,23 +122,12 @@ exhibit_8 = Exhibit.create(name: "Kimono: Kyoto to Catwalk", start_date: "29/02/
 exhibit_9 = Exhibit.create(name: "Tantra, enlightenment to revolution", start_date: "01/07/2020", close_date: "01/10/2020", price: "10", booking_website: "https://www.britishmuseum.org/exhibitions/tantra-enlightenment-revolution", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590495118/taylor-simpson-vPblLZXXdVA-unsplash_ymqd1b.jpg", museum_id: british.id)
 exhibit_10 = Exhibit.create(name: "Astronomy Photographer of the Year Exhibition", start_date: "03/03/2020", close_date: "16/08/2020", price: "15", booking_website: "https://www.rmg.co.uk/whats-on/astronomy-photographer-year/exhibition#", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590495162/greg-rakozy-oMpAz-DN-9I-unsplash_pxsphs.jpg", museum_id: national_maritime.id)
 #####
-exhibit_11 = Exhibit.create(name: 'QUEER AND NOW 2020', start_date: '25/07/2020', close_date: '05/12/2020', price: '0', booking_website: 'https://www.tate.org.uk/whats-on/tate-britain/festival/queer-and-now-2020', museum_id: 4, image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590594546/jason-dent-y9CFVVirBB8-unsplash_dbmpjd.jpg')
+exhibit_11 = Exhibit.create(name: 'QUEER AND NOW 2020', start_date: '25/07/2020', close_date: '05/12/2020', price: '0', booking_website: 'https://www.tate.org.uk/whats-on/tate-britain/festival/queer-and-now-2020', museum_id: tate_modern.id, image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590594546/jason-dent-y9CFVVirBB8-unsplash_dbmpjd.jpg')
+exhibit_12 = Exhibit.create(name: 'ART IN FOCUS', start_date: '25/01/2020', close_date: '28/11/2020', price: '0', booking_website: 'https://www.tate.org.uk/whats-on/tate-britain/talk/art-focus', museum_id: tate_modern.id, image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590598767/toa-heftiba-qYt-ycKB9IM-unsplash_qixecr.jpg')
+exhibit_13 = Exhibit.create(name: 'GWEN JOHN', start_date: '04/10/2020', close_date: '04/11/2020', price: '0', booking_website: 'https://www.tate.org.uk/visit/tate-britain/display/spotlights/gwen-john', museum_id: tate_modern.id, image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590598975/maria-teneva-QtxcAgSZr4w-unsplash_k6bdf6.jpg')
 
-puts "Creating artists..."
-# ARTISTS
-exhibit_1.artists.create(name: 'Dora Maurer', info: 'Hungarian born 1937', category: 'Modern, Multimedia', image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590574751/kinga-cichewicz-T5qJdkPwCgE-unsplash_pxraop.jpg")
-exhibit_2.artists.create(name: 'Michael Abberley', info: 'British artist 1947-2008', category: 'Pottery designer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590499785/halanna-halila-baDpsfyw6q4-unsplash_tdqbg3.jpg')
-exhibit_3.artists.create(name: 'George Gammon Adams', info: '(1821-1898). The portrait sculptor and medallist George Gammon Adams studied at the Royal Academy Schools from 1840, and spent a further year studying in Rome under John Gibson six years later.', category: 'Sculptor', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500566/daniel-robert-I3z6YXsIfIM-unsplash_ywbqv7.jpg')
-exhibit_4.artists.create(name: 'Léon Spilliaert', info: 'Belgian born 1881', category: 'Symbolism, Expressionism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496063/L%C3%A9on_Spilliaert_-_Self_Portrait_-_Met_-_1980.208_fzncxx.jpg')
-exhibit_5.artists.create(name: 'Lorenzo Agius', info: '(1962-) Agius studied Art and Art History at the University of East Anglia, moved to London in 1983 and started to assist in photography.', category: 'Photographer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500643/angello-pro-IegYaCY101s-unsplash_d3rd2m.jpg' )
-exhibit_6.artists.create(name: 'Geoffrey Clarke', info: 'British 1924–2014', category: 'Sculpture, Ecclesiastical art', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590497135/jen-theodore-9Q_C6rXHQjk-unsplash_xueqwl.jpg')
-exhibit_6.artists.create(name: 'David Hockney', info: 'British born 1937', category: 'Pop art, Cubism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496937/david-hockney_lzkpdw.jpg')
-exhibit_7.artists.create(name: 'James Abbe', info: '(1883-1973). Abbe started his career in New York and Hollywood, making Paris his base in the 1920s with a studio in the same road as Man Ray.', category: 'Photographer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500434/james-coleman-IboveVcO7r8-unsplash_vypmd3.jpg')
-exhibit_8.artists.create(name: "Jotaro Saito", info: "Having begun his career designing both western clothing and kimono, at the age of 27, Jotaro Saito made the decision to concentrate solely on the latter. The experience gained through designing western styles greatly influenced the direction of his kimono.", category: "Fashion", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590499623/JOTAROSAITO_portrait_tgyypj.jpg")
-exhibit_9.artists.create(name: "Imma Ramos", info: "Imma Ramos is curator of the South Asia collections at the British Museum in London. Her research interests revolve around the relationship between religion, politics and gender in South Asian visual culture.", category: "Asian", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590500092/kim-jones-EcldzGBAB0A-unsplash_aoq7cn.jpg")
-exhibit_10.artists.create(name: "László Francsics", info: "László Francsics, president of the Association of Hungarian Astrophotographers, has won three awards with his photographs in this years’ Astronomy Photographer of the Year 2019.", category: "Photography", image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590500500/alasdair-elmes-jQR05LubOgw-unsplash_pkfoeb.jpg")
+exhibit_14 = Exhibit.create(name: 'MEMBERS PRIVATE VIEW: LYNETTE YIADOM-BOAKYE', start_date: '09/09/2020', close_date: '11/12/2020', price: '0', booking_website: 'https://www.tate.org.uk/whats-on/tate-britain/exhibition/lynette-yiadom-boakye/members-private-view-lynette-yiadom-boakye', museum_id: v_and_a.id, image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590599577/karim-manjra-fm9wqDNXyQ0-unsplash_kihjiw.jpg')
 
-#########
  puts "Adding some colors to the exhibits..."
 
 ExhibitArtist.create(exhibit_id: exhibit_1.id, artist_id: artist_1.id)
@@ -140,6 +140,8 @@ ExhibitArtist.create(exhibit_id: exhibit_6.id, artist_id: artist_11.id)
 ExhibitArtist.create(exhibit_id: exhibit_7.id, artist_id: artist_3.id)
 ExhibitArtist.create(exhibit_id: exhibit_8.id, artist_id: artist_6.id)
 ExhibitArtist.create(exhibit_id: exhibit_9.id, artist_id: artist_7.id)
+ExhibitArtist.create(exhibit_id: exhibit_10.id, artist_id: artist_8.id)
+ExhibitArtist.create(exhibit_id: exhibit_11.id, artist_id: artist_1.id)
 
 
 puts "Seeding complete!"
