@@ -1,38 +1,68 @@
 <div class="indexbanner"><h1>Find your next exhibition</h1></div>
 
-<div class="exhibits">
+<h1>Our recommendations</h1>
 
-  <% @exhibits.each do |exhibit| %>
+    <div class="exhibits">
 
-    <div class="exhibit-card">
-      <div class="exhibit-image">
-        <%= link_to image_tag("https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"), exhibit_path(exhibit) %>
-      </div>
+      <% @exhibits.first(4).each do |exhibit| %>
 
-      <div class="exhibit-info">
+        <div class="exhibit-card">
+          <div class="exhibit-image">
+            <%= link_to image_tag("https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"), exhibit_path(exhibit) %>
+          </div>
 
-        <h5><%= exhibit.name %></h5>
+          <div class="exhibit-info">
 
-        <hr width="50%" size="10" color="black">
+            <h5><%= exhibit.name %></h5>
 
-        <div class="exhibit-info-left">
-          <p><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
-          <p>Placeholder</p>
+            <hr width="50%" size="10" color="black">
+
+            <div class="exhibit-info-left">
+              <p><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
+              <p>Placeholder</p>
+            </div>
+
+            <div class="exhibit-info-right">
+              <% if exhibit.price = 0 %>
+                <p>Free!</p>
+              <% else %>
+                <p>£<%= exhibit.price %></p>
+              <% end %>
+              <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="exhibit-info-right">
-          <% if exhibit.price = 0 %>
-            <p>Free!</p>
-          <% else %>
-            <p>£<%= exhibit.price %></p>
-          <% end %>
-          <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
-        </div>
-
-      </div>
-
+      <% end %>
     </div>
 
-  <% end %>
 
+<div class="artist-h2"><h2>Artist of the week</h2></div>
+
+<div class="artist-card">
+  <div class="artist-image">
+  <%= link_to image_tag("https://res.cloudinary.com/dofvu2msx/image/upload/v1590500643/angello-pro-IegYaCY101s-unsplash_d3rd2m.jpg") %>
+  </div>
+
+  <div class="artist-card-info">
+    <h3>artis name</h3>
+    <p>Details about the artist</p>
+  </div>
 </div>
+
+<div class="museum-h2"><h2>Did you know?</h2></div>
+
+<div class="museum-card">
+  <div class="museum-card-info">
+    <h3>British museum</h3>
+    <p>The British Museum is big. And when we say big, we mean The British Museum is home to other 8 million pieces all dedicated to the preservation of thousands of years of human history. Although there are 8 million pieces inside the walls of the British Museum, they only display around 80,000 pieces at a time. Exhibitions are constantly shifting and changing at the British Museum, so make sure you keep your eyes peeled for exciting new displays throughout the year!</p>
+  </div>
+
+    <div class="museum-image">
+    <%= link_to image_tag("https://res.cloudinary.com/dofvu2msx/image/upload/v1590591893/british-museum-5200528_1920_aus4r3.jpg") %>
+    </div>
+</div>
+
+
