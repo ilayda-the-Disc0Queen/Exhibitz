@@ -46,7 +46,8 @@
 
   <div class="about-the-artist">
     <h2>About the artist</h2>
-    <p>Testing, testing...</p>
+    <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
+    <p><%= @exhibit.artists.first.info %></p>
   </div>
 
 </div>
