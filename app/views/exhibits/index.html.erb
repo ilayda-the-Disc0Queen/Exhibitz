@@ -16,12 +16,16 @@
         <hr width="50%" size="10" color="black">
 
         <div class="exhibit-info-left">
-          <p><%= exhibit.museum.name %></p>
+          <p><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
           <p>Placeholder</p>
         </div>
 
         <div class="exhibit-info-right">
-          <p>£<%= exhibit.price %></p>
+          <% if exhibit.price = 0 %>
+            <p>Free!</p>
+          <% else %>
+            <p>£<%= exhibit.price %></p>
+          <% end %>
           <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
         </div>
 
