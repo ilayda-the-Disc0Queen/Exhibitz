@@ -1,10 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "exhibitsindex";
+@import "artistsindex";
 @import "exhibitsshow";
+@import "locations";
 
 .exhibits {
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -13,19 +15,24 @@
 .exhibit-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 10px;
-  width: 35%;
+  margin: 0px;
   overflow: hidden;
+  flex: 23%;
+  max-width: 23%;
+  margin-top: 20px;
+  max-height: 432px;
+  margin-bottom: 30px;
 }
 
 .exhibit-image img{
-  height: 300px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   }
 
 .exhibit-info {
   padding: 15px;
+  max-height: 87px;
 }
 
 .exhibit-info-right {
@@ -43,3 +50,48 @@ h5 {
   text-align: center;
 }
 
+.artist-image img {
+  height: 100%;
+  width: 700px;
+  object-fit: cover;
+}
+
+.artist-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 12px;
+  overflow: hidden;
+  flex: 50%;
+  // max-width: 50%;
+  height: 300px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+
+.artist-h2 {
+  margin-left: 25px;
+}
+
+.museum-image img {
+  height: 300px;
+  width: 600px;
+  object-fit: cover;
+}
+
+.museum-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 12px;
+  overflow: hidden;
+  flex: 50%;
+  // max-width: 50%;
+  height: 300px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+
+.museum-h2 {
+  margin-left: 25px;
+}

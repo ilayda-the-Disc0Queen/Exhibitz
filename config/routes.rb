@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :exhibits, only: [:index, :show]
   resources :artists, only: [:index, :show]
   resources :museums, only: [:index, :show]
+  get "locations", to: "pages#locations"
 end

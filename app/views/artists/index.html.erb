@@ -1,1 +1,25 @@
-<h1>Artists index page</h1>
+<div class="artistindexbanner"><h1>Meet the artists</h1></div>
+
+<div class="exhibits mt-3">
+
+  <% @artists.each do |artist| %>
+    <div class="exhibit-card">
+      <div class="artist-image">
+        <%= link_to image_tag(artist.image), artist_path(artist) %>
+      </div>
+
+      <div class="artist-info">
+
+        <h1><%= link_to artist.name, artist_path(artist) %></h1>
+
+
+          <p><%= artist.category %></p>
+
+
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>
