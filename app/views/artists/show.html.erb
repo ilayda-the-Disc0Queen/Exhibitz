@@ -1,13 +1,14 @@
-<div class="container my-4">
-  <div class="info-card">
+<div class="exhibits my-3">
+<!-- <div class="info-card">
     <img src= <%= @artist.image %> />
+
     <div class="info-card-infos">
       <h2><%= @artist.name %></h2>
       <h3>Category: <%= @artist.category %></h3>
       <p><%= @artist.info %></p>
-      <p>Featured in "<%= @artist.exhibits.first.name %>" at the <%= @artist.exhibits.first.museum.name %>
+      <p>See their work in the exhibit "<%= @artist.exhibits.first.name %>", now showing at the <%= @artist.exhibits.first.museum.name %>
         from <%= @artist.exhibits.first.start_date %> to <%= @artist.exhibits.first.close_date %>.</p>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mb-3">
           <button type="button" class="btn btn-outline-dark mr-1">
             <%= link_to "View exhibit", exhibit_path(@artist.exhibits.first) %>
         </button>
@@ -16,5 +17,30 @@
         </button>
         </div>
     </div>
+  </div> -->
+
+
+<div class="table-container">
+  <div class="table-col">
+    <div class="image-wrapper py-3 pl-3">
+      <img src= <%= @artist.image %> />
+    </div>
+  </div>
+
+  <div class="table-col col-info py-3 pr-3">
+    <h2><%= @artist.name %></h2>
+    <h3>Category: <%= @artist.category %></h3>
+    <p><%= @artist.info %></p>
+    <p>See their work in the exhibit "<%= @artist.exhibits.first.name %>", now showing at the <%= @artist.exhibits.first.museum.name %>from <%= @artist.exhibits.first.start_date %> to <%= @artist.exhibits.first.close_date %>.</p>
+    <div class="d-flex justify-content-center mb-3">
+      <button type="button" class="btn btn-outline-dark mr-1">
+        <%= link_to "View exhibit", exhibit_path(@artist.exhibits.first) %>
+      </button>
+      <button type="button" class="btn btn-outline-dark">
+        <%= link_to "All exhibits", exhibits_path %>
+      </button>
+    </div>
+  </div>
   </div>
 </div>
+
