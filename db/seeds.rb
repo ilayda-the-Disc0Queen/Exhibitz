@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Museum.destroy_all
 Exhibit.destroy_all
+Museum.destroy_all
 Artist.destroy_all
 User.destroy_all
 
@@ -46,7 +46,7 @@ exhibit_10 = Exhibit.create(name: "Astronomy Photographer of the Year Exhibition
 
 puts "Creating artists..."
 # ARTISTS
-exhibit_1.artists.create(name: 'Dora Maurer', info: 'Hungarian born 1937', category: 'Modern, Multimedia')
+exhibit_1.artists.create(name: 'Dora Maurer', info: 'Hungarian born 1937', category: 'Modern, Multimedia', image: "https://res.cloudinary.com/dofvu2msx/image/upload/v1590574751/kinga-cichewicz-T5qJdkPwCgE-unsplash_pxraop.jpg")
 exhibit_2.artists.create(name: 'Michael Abberley', info: 'British artist 1947-2008', category: 'Pottery designer', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590499785/halanna-halila-baDpsfyw6q4-unsplash_tdqbg3.jpg')
 exhibit_3.artists.create(name: 'George Gammon Adams', info: '(1821-1898). The portrait sculptor and medallist George Gammon Adams studied at the Royal Academy Schools from 1840, and spent a further year studying in Rome under John Gibson six years later.', category: 'Sculptor', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590500566/daniel-robert-I3z6YXsIfIM-unsplash_ywbqv7.jpg')
 exhibit_4.artists.create(name: 'Léon Spilliaert', info: 'Belgian born 1881', category: 'Symbolism, Expressionism', image: 'https://res.cloudinary.com/dofvu2msx/image/upload/v1590496063/L%C3%A9on_Spilliaert_-_Self_Portrait_-_Met_-_1980.208_fzncxx.jpg')
