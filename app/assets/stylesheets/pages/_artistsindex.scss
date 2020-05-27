@@ -1,0 +1,41 @@
+.artistindexbanner {
+  padding: 200px 0;
+  border: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1590596799/khara-woods-KR84RpMCb0w-unsplash_rs46pn.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 10%;
+}
+
+.artistindexbanner h1 {
+  color: white;
+  letter-spacing: 3px;
+}
+
+.artist-info  {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.artist-info h1 {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.artist-image img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+  }
+
+h1:hover {
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+}
