@@ -3,4 +3,14 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def locations
+    @museums = Museum.all
+    @markers = @museums.map do |museum|
+      {
+        lat: museum.latitude,
+        lng: museum.longitude
+      }
+    end
+  end
 end
