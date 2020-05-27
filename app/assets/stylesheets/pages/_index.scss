@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "exhibitsindex";
+@import "exhibitsshow";
 
 .exhibits {
   justify-content: center;
@@ -11,13 +13,13 @@
 .exhibit-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 20px;
+  margin: 10px;
   width: 35%;
   overflow: hidden;
 }
 
 .exhibit-image img{
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   }
@@ -40,3 +42,4 @@
 h5 {
   text-align: center;
 }
+

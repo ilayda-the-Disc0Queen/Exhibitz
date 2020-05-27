@@ -5,4 +5,5 @@ class Exhibit < ApplicationRecord
   has_many :users, through: :favourites
   has_many :bookings
   has_many :users, through: :bookings
+  belongs_to :museum
 end
