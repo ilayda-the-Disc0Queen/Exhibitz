@@ -20,12 +20,11 @@
   </button>
 
   <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <input class="form-control string required d-inline-block" type="text" name="search[query]" id="search_query" />
     <button name="button" type="submit" class="btn btn-flat">
       <i class="fas fa-search"></i> Search
     </button>
   </div>
-
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -46,8 +45,16 @@
   </div>
 </div>
 
+<div class="second-navbar p-3 d-flex justify-content-between">
+  <%= link_to "museum", "#", class: "mr-auto" %>
+  <%= link_to "artist", "#", class: "mr-auto" %>
+  <%= link_to "exhibition", "#", class: "mr-auto" %>
+  <%= link_to "style", "#", class: "mr-auto" %>
+</div>
 
-   <!--  <%= render 'shared/navbar' %>
+
+
+    <!-- <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>-->
     <%= yield %>
 
