@@ -11,10 +11,10 @@ Artist.destroy_all
 User.destroy_all
 
 # 4 users
-User.create(email: "ilayda@exhibitz.com", first_name: "Ilayda")
-User.create(email: "raul@exhibitz.com", first_name: "Raul")
-User.create(email: "zita@exhibitz.com", first_name: "Zita")
-User.create(email: "joel@exhibitz.com", first_name: "Joel")
+User.create(email: "ilayda@exhibitz.com", first_name: "Ilayda", password: "password")
+User.create(email: "raul@exhibitz.com", first_name: "Raul", password: "password")
+User.create(email: "zita@exhibitz.com", first_name: "Zita", password: "password")
+User.create(email: "joel@exhibitz.com", first_name: "Joel", password: "password")
 
 puts "Creating museums..."
 # MUSEUMS
