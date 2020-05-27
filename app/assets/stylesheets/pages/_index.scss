@@ -30,6 +30,7 @@
 
 .exhibit-info {
   padding: 15px;
+  max-height: 87px;
 }
 
 .exhibit-info-right {
@@ -71,7 +72,7 @@ h5 {
 }
 
 .museum-image img {
-  height: 100%;
+  height: 300px;
   width: 600px;
   object-fit: cover;
 }
