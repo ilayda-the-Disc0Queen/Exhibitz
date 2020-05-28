@@ -1,15 +1,15 @@
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #e4e4e4;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
 }
 
-.museum-dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
+.museum-dropbtn, .artist-dropbtn, .exhibit-dropbtn, .style-dropbtn {
+  background-color: #e4e4e4;
+  color: black;
+  padding: 2px;
   font-size: 16px;
   border: none;
 }
@@ -19,47 +19,32 @@
   display: inline-block;
 }
 
-//
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  background-color: grey;
+  min-width: 10000px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  width: 10vw;
 }
-// .museum-dropdown {
-//   position: relative;
-//   display: inline-block;
-// }
-// .museum-dropdown-content {
-//   display: none;
-//   position: absolute;
-//   background-color: #f1f1f1;
-//   min-width: 160px;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//   z-index: 1;
-// }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 12px 0px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {color: #801336;}
 
 .dropdown:hover .dropdown-content {display: flex;}
 
-.museum-dropdown:hover .museum-dropdown-content {display: flex;}
-.artist-dropdown:hover .artist-dropdown-content {display: flex;}
-
-.dropdown:hover .dropbtn {background-color: red;}
-
-// .dropdown:hover #museum {display: flex;}
-
 .museum-dropdown:hover .museum-dropdown-content {
-  display: flex;
-}
+  display: contents;
+  color: white;}
+.artist-dropdown:hover .artist-dropdown-content {display: contents;}
+.exhibit-dropdown:hover .exhibit-dropdown-content {display: contents;}
+.style-dropdown:hover .style-dropdown-content {display: contents;}
+
+// .dropdown:hover .dropbtn {background-color: red;}

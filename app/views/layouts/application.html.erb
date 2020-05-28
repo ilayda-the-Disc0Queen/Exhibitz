@@ -11,8 +11,8 @@
   </head>
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
-      <%= link_to "#", class: "navbar-brand" do %>
-        <%= image_tag " " %>
+      <%= link_to exhibits_path, class: "navbar-brand" do %>
+        <%= image_tag "https://res.cloudinary.com/dofvu2msx/image/upload/v1590682684/Screenshot_2020-05-28_at_17.17.48_q4lrne.png", :size => "170x70", :crop => :fill %>
       <% end %>
 
 
@@ -46,41 +46,39 @@
   </div>
 
     <!-- second navbar -->
-    <div class="second-navbar p-3 d-flex justify-content-between">
-      <%= link_to "Museums", "#", class: "mr-auto" %>
-      <%= link_to "Artists", artists_path, class: "mr-auto" %>
-      <%= link_to "Exhibitions", exhibits_path, class: "mr-auto" %>
-      <%= link_to "Style", "#", class: "mr-auto" %>
-    </div>
-
+  <div class="second-navbar p-3 d-flex justify-content-around">
     <div class="museum-dropdown dropdown">
       <button class="museum-dropbtn">Museums</button>
       <div class="museum-dropdown-content dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="<%= museums_path %>">All museums</a>
+        <a href="#">Museums near me</a>
+        <a href="#">List A - Z</a>
       </div>
     </div>
-      <div class="dropdown artist-dropdown">
-        <button class="dropbtn">Artists</button>
-        <div class="dropdown-content artist-dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+    <div class="dropdown artist-dropdown">
+      <button class="artist-dropbtn">Artists</button>
+      <div class="dropdown-content artist-dropdown-content">
+        <a href="<%= artists_path %>">All artists</a>
+        <a href="#">Featured</a>
       </div>
-      <!-- <button class="dropbtn">Exhibitions</button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-      <button class="dropbtn">Styles</button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div> -->
     </div>
+    <div class="exhibit-dropdown dropdown">
+      <button class="exhibit-dropbtn">Exhibits</button>
+      <div class="exhibit-dropdown-content dropdown-content">
+        <a href="<%= exhibits_path %>">All exhibits</a>
+        <a href="#">Featured exhibits</a>
+        <a href="#">List A - Z</a>
+      </div>
+    </div>
+    <div class="style-dropdown dropdown">
+      <button class="style-dropbtn">Styles</button>
+      <div class="style-dropdown-content dropdown-content">
+        <a href="#">Featured exhibits</a>
+        <a href="#">List A - Z</a>
+      </div>
+    </div>
+  </div>
+
 
       <!-- <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>-->
