@@ -8,18 +8,18 @@
 
         <div class="exhibit-card">
           <div class="exhibit-image">
-            <%= link_to image_tag("https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"), exhibit_path(exhibit) %>
+            <%= link_to image_tag(exhibit.image), exhibit_path(exhibit) %>
           </div>
 
           <div class="exhibit-info">
 
-            <h5><%= exhibit.name.truncate(22) %></h5>
+            <h5><%= link_to exhibit.name.truncate(22), exhibit_path(exhibit) %></h5>
 
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
-              <p><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
-              <p class="m-1">Placeholder</p>
+              <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
+              <p class="m-1"></p>
             </div>
 
             <div class="exhibit-info-right">
@@ -66,24 +66,26 @@
 
 </div>
 
- <div class="exhibits">
+<h1>All Exhibits</h1>
+
+  <div class="exhibits">
 
       <% @exhibits.each do |exhibit| %>
 
         <div class="exhibit-card">
           <div class="exhibit-image">
-            <%= link_to image_tag("https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"), exhibit_path(exhibit) %>
+            <%= link_to image_tag(exhibit.image), exhibit_path(exhibit) %>
           </div>
 
           <div class="exhibit-info">
 
-            <h5><%= exhibit.name.truncate(22) %></h5>
+            <h5><%= link_to exhibit.name.truncate(22), exhibit_path(exhibit) %></h5>
 
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
-              <p><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
-              <p class="m-1">Placeholder</p>
+              <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
+              <p class="m-1"></p>
             </div>
 
             <div class="exhibit-info-right">
