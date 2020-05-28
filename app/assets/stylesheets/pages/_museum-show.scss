@@ -3,10 +3,14 @@
 }
 
 .museum-image img{
-  margin-top: 16px;
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+  // padding: 200px 0;
+  border: 0;
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1590596799/khara-woods-KR84RpMCb0w-unsplash_rs46pn.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 10%;
 }
 
 .museum-info {
@@ -31,4 +35,20 @@
 .dates{
   display: block;
   text-align: left;
+}
+
+.artistindexbanner {
+  padding: 200px 0;
+  border: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1590596799/khara-woods-KR84RpMCb0w-unsplash_rs46pn.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 10%;
+}
+
+.artistindexbanner h1 {
+  color: white;
+  letter-spacing: 3px;
 }
