@@ -13,3 +13,7 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/museum-show";
+
+.min-height {
+  min-height: calc(100vh - 130px);
+}
