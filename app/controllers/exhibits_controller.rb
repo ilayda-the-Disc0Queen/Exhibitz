@@ -5,5 +5,6 @@ class ExhibitsController < ApplicationController
 
   def show
     @exhibit = Exhibit.find(params[:id])
+    @booking = Booking.new
   end
 end
