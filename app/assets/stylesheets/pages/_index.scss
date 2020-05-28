@@ -4,6 +4,7 @@
 @import "artistsindex";
 @import "exhibitsshow";
 @import "locations";
+@import "museumsindex";
 
 .exhibits {
   justify-content: space-around;
@@ -50,13 +51,13 @@ h5 {
   text-align: center;
 }
 
-.artist-image img {
+.ft-artist-image img {
   height: 100%;
   width: 700px;
   object-fit: cover;
 }
 
-.artist-card {
+.ft-artist-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 12px;
@@ -73,13 +74,18 @@ h5 {
   margin-left: 25px;
 }
 
-.museum-image img {
-  height: 300px;
-  width: 600px;
+.ft-museum-image img {
+  height: 100%;
+  width: 700px;
   object-fit: cover;
 }
 
-.museum-card {
+.ft-museum-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.ft-museum-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 12px;
@@ -90,8 +96,16 @@ h5 {
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
-  }
+}
 
 .museum-h2 {
   margin-left: 25px;
+}
+
+.ft-artist-card-info {
+  padding: 10px;
+}
+
+.ft-museum-card-info {
+  padding: 10px;
 }

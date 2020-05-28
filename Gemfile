@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'geocoder'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'turbolinks', '~> 5'
+
 
 
 group :development do

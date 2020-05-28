@@ -1,1 +1,21 @@
-<h1>Museums index pagesass!!</h1>
+<div class="museumsbanner"><h1>Find a museum</h1></div>
+
+<div class="museums">
+  <% @museums.each do |museum| %>
+    <div class="museum-card">
+
+      <div class="museum-index-image">
+        <%= link_to image_tag(museum.image) %>
+      </div>
+
+      <div class="museum-index-info">
+        <h4><%= link_to museum.name, museum_path(museum)%></h4>
+        <p>Address: <%= museum.address %></p>
+        <p>Opening hours: <%= museum.opening_hours %></p>
+        <p>What's on: </p>
+        <%= link_to museum.exhibits.first.name, exhibit_path(museum.exhibits.first) %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
