@@ -9,7 +9,9 @@ class PagesController < ApplicationController
     @markers = @museums.map do |museum|
       {
         lat: museum.latitude,
-        lng: museum.longitude
+        lng: museum.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { museum: museum }),
+        image_url: helpers.asset_url('https://www.imperial.ac.uk/humanities/webdesign/2011/raynersimpson/images/e.jpg')
       }
     end
   end
