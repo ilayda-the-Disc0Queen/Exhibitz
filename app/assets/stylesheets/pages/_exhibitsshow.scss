@@ -41,8 +41,9 @@ h1 {
 }
 
 .booking-button {
-  width: 80%;
+  width: auto;
   margin: 10px;
+  padding: 3px;
 }
 
 .image-carousel {
@@ -53,7 +54,7 @@ h1 {
 .carousel-item img {
   height: 400px;
   object-fit: contain;
-  margin-bottom: 25px;
+  margin-top: 20px;
 
 }
 
@@ -68,30 +69,16 @@ h1 {
 
 .carousel-control-prev,
 .carousel-control-next{
+  height: 20px;
+  top: 50%;
 }
 
-.about-the-artist-image img {
-  height: 100%;
-  width: 500px;
-  object-fit: cover;
+.carousel-control-prev {
+  left: 10%;
+
+
 }
 
-.about-the-artist {
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 12px;
-  overflow: hidden;
-  flex: 50%;
-  // max-width: 50%;
-  height: 300px;
-  display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
+.carousel-control-next {
+  right: 10%;
 }
-
-.about-the-artist-info {
-  height: 100%;
-  width: 500px;
-  margin-left: 30px;
-}
-
