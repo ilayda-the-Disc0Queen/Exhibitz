@@ -12,8 +12,6 @@
         <h4><%= link_to museum.name, museum_path(museum)%></h4>
         <p>Address: <%= museum.address %></p>
         <p>Opening hours: <%= museum.opening_hours %></p>
-        <p>What's on: </p>
-        <%= link_to museum.exhibits.first.name, exhibit_path(museum.exhibits.first) %>
       </div>
     </div>
   <% end %>
