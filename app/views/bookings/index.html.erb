@@ -1,0 +1,19 @@
+
+
+<div class="my-bookings-banner"><h1>My bookings</h1></div>
+
+<div class="container">
+  <div class="my-bookings_list">
+    <div class="my-bookings-card">
+      <% @bookings.each do |booking| %>
+        <% if booking.user==current_user %> 
+          <p><%= booking.exhibit.name %></p>
+          <p><%= booking.date %></p>
+          <p><%= booking.exhibit.artists.name %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
