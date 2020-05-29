@@ -55,6 +55,8 @@
   background-color: #F4F4F4;
   display: flex;
   justify-content: space-around;
+  z-index: 0;
+  box-shadow: 0px 12px 15px -15px rgba(0,0,0,0.10);
 }
 
 /* Links inside the navbar */
@@ -90,6 +92,9 @@
   background-color: #F4F4F4;
   min-width: 160px;
   z-index: 1;
+  border-left: rgba(0,0,0,0.05) solid .05px;
+  border-right: rgba(0,0,0,0.05) solid .05px;
+  border-bottom: rgba(0,0,0,0.05) solid .05px;
 }
 
 /* Links inside the dropdown */

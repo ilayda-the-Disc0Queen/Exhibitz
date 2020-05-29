@@ -21,8 +21,8 @@
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
               <p class="m-1">
                 <a href="/">
-                   <img alt="heart" src="http://clipart-library.com/images/RkiMyoycj.png"
-                   width="30" height="30">
+                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
+                   width="20" height="20">
                 </a>
               </p>
             </div>
@@ -48,7 +48,7 @@
 
 <div class="ft-artist-card">
   <div class="ft-artist-image">
-  <%= image_tag(Artist.last.image) %>
+  <%= link_to image_tag(Artist.last.image), artist_path(Artist.last) %>
   </div>
 
   <div class="ft-artist-card-info">
@@ -66,7 +66,7 @@
   </div>
 
   <div class="ft-museum-image">
-    <%= image_tag(Museum.last.image) %>
+  <%= link_to image_tag(Museum.last.image), museum_path(Museum.last) %>
   </div>
 
 </div>
@@ -93,8 +93,8 @@
               <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
               <p class="m-1">
                 <a href="/">
-                   <img alt="heart" src="http://clipart-library.com/images/RkiMyoycj.png"
-                   width="30" height="30">
+                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
+                   width="20" height="20">
                 </a>
               </p>
             </div>
