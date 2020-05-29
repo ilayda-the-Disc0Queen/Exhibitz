@@ -22,7 +22,7 @@
   flex: 23%;
   max-width: 23%;
   margin-top: 20px;
-  max-height: 432px;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -35,17 +35,18 @@
 .exhibit-info {
   padding: 15px;
   max-height: 87px;
+  line-height: 35px;
 }
 
 .exhibit-info-right {
   float: right;
   text-align: right;
-  position: relative;
 }
 
 .exhibit-info-left {
   float: left;
   text-align: left;
+  position: absolute;
 }
 
 h5 {
@@ -104,9 +105,26 @@ h5 {
 }
 
 .ft-artist-card-info {
-  padding: 10px;
+  padding: 20px;
 }
 
 .ft-museum-card-info {
-  padding: 10px;
+  padding: 20px;
+}
+
+.exhibit-info-name {
+  line-height: 70px;
+  height: 80px;
+  text-align: center;
+}
+
+.exhibit-info-name h5 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.heart-button {
+  border: 0;
 }
