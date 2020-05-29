@@ -1,3 +1,6 @@
+<% content_for :meta_title, "Find more info about #{@exhibit.name} on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @exhibit.description %>
+<% content_for :meta_image, cl_image_path(@exhibit.image.path) %>
 <h1><%= @exhibit.name %></h1>
 
 <div class="exhibits">
