@@ -1,0 +1,5 @@
+meta_product_name: "Exhibitz"
+meta_title: "Exhibitz - Never miss an exhibition again"
+meta_description: "Need inspiration for which museum or gallery to visit next? Browse all temporary exhibits in London and search by museum, artist or category to find one you'll love!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@exhibitz1"   # required for Twitter Cards
