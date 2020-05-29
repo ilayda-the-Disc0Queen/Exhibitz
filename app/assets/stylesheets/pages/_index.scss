@@ -104,9 +104,22 @@ h5 {
 }
 
 .ft-artist-card-info {
-  padding: 10px;
+  padding: 20px;
 }
 
 .ft-museum-card-info {
-  padding: 10px;
+  padding: 20px;
+}
+
+.exhibit-info-name {
+  line-height: 70px;
+  height: 80px;
+  text-align: center;
+}
+
+.exhibit-info-name h5 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
 }
