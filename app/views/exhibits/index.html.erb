@@ -1,4 +1,4 @@
-<div class="indexbanner"><h1>Find your next exhibition</h1></div>
+<div class="indexbanner"><h1>Never miss an exhibition again</h1></div>
 
 <h1>Our recommendations</h1>
 
@@ -12,18 +12,23 @@
           </div>
 
           <div class="exhibit-info">
-
-            <h5><%= link_to exhibit.name.truncate(22), exhibit_path(exhibit) %></h5>
-
+            <div class="exhibit-info-name">
+              <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
+            </div>
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
-              <p class="m-1"></p>
+              <p class="m-1">
+                <a href="/">
+                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
+                   width="20" height="20">
+                </a>
+              </p>
             </div>
 
             <div class="exhibit-info-right">
-              <% if exhibit.price = 0 %>
+              <% if exhibit.price == 0 %>
                 <p class="m-1">Free!</p>
               <% else %>
                 <p class="m-1">£<%= exhibit.price %></p>
@@ -39,29 +44,29 @@
     </div>
 
 
-<div class="artist-h2"><h2>Artist of the week</h2></div>
+<h1>Artist of the week</h1>
 
 <div class="ft-artist-card">
   <div class="ft-artist-image">
-  <%= image_tag("https://res.cloudinary.com/dofvu2msx/image/upload/v1590500643/angello-pro-IegYaCY101s-unsplash_d3rd2m.jpg") %>
+  <%= link_to image_tag(Artist.last.image), artist_path(Artist.last) %>
   </div>
 
   <div class="ft-artist-card-info">
-    <h3>Artist name</h3>
-    <p>Details about the artist</p>
+    <h3><%= Artist.last.name %></h3>
+    <p><%= Artist.last.info %></p>
   </div>
 </div>
 
-<div class="museum-h2"><h2>Did you know?</h2></div>
+<h1>Did you know?</h1>
 
 <div class="ft-museum-card">
   <div class="ft-museum-card-info">
-    <h3>British museum</h3>
-    <p>The British Museum is big. And when we say big, we mean The British Museum is home to other 8 million pieces all dedicated to the preservation of thousands of years of human history. Although there are 8 million pieces inside the walls of the British Museum, they only display around 80,000 pieces at a time. Exhibitions are constantly shifting and changing at the British Museum, so make sure you keep your eyes peeled for exciting new displays throughout the year!</p>
+    <h3><%= Museum.last.name %> </h3>
+    <p><%= Museum.last.info %></p>
   </div>
 
   <div class="ft-museum-image">
-    <%= image_tag("https://res.cloudinary.com/dofvu2msx/image/upload/v1590591893/british-museum-5200528_1920_aus4r3.jpg") %>
+  <%= link_to image_tag(Museum.last.image), museum_path(Museum.last) %>
   </div>
 
 </div>
@@ -78,18 +83,24 @@
           </div>
 
           <div class="exhibit-info">
-
-            <h5><%= link_to exhibit.name.truncate(22), exhibit_path(exhibit) %></h5>
+            <div class="exhibit-info-name">
+              <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
+            </div>
 
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
               <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
-              <p class="m-1"></p>
+              <p class="m-1">
+                <a href="/">
+                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
+                   width="20" height="20">
+                </a>
+              </p>
             </div>
 
             <div class="exhibit-info-right">
-              <% if exhibit.price = 0 %>
+              <% if exhibit.price == 0 %>
                 <p class="m-1">Free!</p>
               <% else %>
                 <p class="m-1">£<%= exhibit.price %></p>

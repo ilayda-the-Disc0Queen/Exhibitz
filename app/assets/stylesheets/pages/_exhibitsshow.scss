@@ -4,8 +4,9 @@
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 10px;
-  width: 80%;
+  width: 70%;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 
 .image-show {
@@ -13,11 +14,15 @@
   height: 500px;
   text-align: center;
   margin: 10px;
+  margin-bottom: 25px;
+
 }
 
 .image-show img {
   height: 100%;
   object-fit: contain;
+  margin-bottom: 25px;
+
 }
 
 .about-the-artist {
@@ -31,6 +36,8 @@
 
 h1 {
   text-align: center;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .booking-button {
@@ -46,6 +53,8 @@ h1 {
 .carousel-item img {
   height: 400px;
   object-fit: contain;
+  margin-bottom: 25px;
+
 }
 
 .carousel-control-next-icon,
@@ -59,6 +68,30 @@ h1 {
 
 .carousel-control-prev,
 .carousel-control-next{
+}
 
+.about-the-artist-image img {
+  height: 100%;
+  width: 500px;
+  object-fit: cover;
+}
+
+.about-the-artist {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 12px;
+  overflow: hidden;
+  flex: 50%;
+  // max-width: 50%;
+  height: 300px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-the-artist-info {
+  height: 100%;
+  width: 500px;
+  margin-left: 30px;
 }
 

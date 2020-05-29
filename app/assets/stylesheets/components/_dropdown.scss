@@ -1,4 +1,4 @@
-.dropbtn {
+/*.dropbtn {
   background-color: #e4e4e4;
   color: white;
   padding: 16px;
@@ -47,4 +47,72 @@
 .exhibit-dropdown:hover .exhibit-dropdown-content {display: contents;}
 .style-dropdown:hover .style-dropdown-content {display: contents;}
 
-// .dropdown:hover .dropbtn {background-color: red;}
+// .dropdown:hover .dropbtn {background-color: red;}*/
+
+/* Navbar container */
+.sub-navbar {
+  overflow: hidden;
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+  box-shadow: 0px 12px 15px -15px rgba(0,0,0,0.10);
+}
+
+/* Links inside the navbar */
+.sub-navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.sub-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.sub-dropdown .sub-dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F4F4F4;
+  min-width: 160px;
+  z-index: 1;
+  border-left: rgba(0,0,0,0.05) solid .05px;
+  border-right: rgba(0,0,0,0.05) solid .05px;
+  border-bottom: rgba(0,0,0,0.05) solid .05px;
+}
+
+/* Links inside the dropdown */
+.sub-dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.sub-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
