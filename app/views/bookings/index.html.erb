@@ -3,16 +3,19 @@
 <div class="my-bookings-banner"><h1>My bookings</h1></div>
 
 <div class="container">
-  <div class="my-bookings_list">
-    <div class="my-bookings-card">
+  <div class="my-bookings-list">
       <% @bookings.each do |booking| %>
-        <% if booking.user==current_user %> 
-          <p><%= booking.exhibit.name %></p>
-          <p><%= booking.date %></p>
-          <p><%= booking.exhibit.artists.name %></p>
+        <% if booking.user==current_user %>
+          <div class="my-bookings-card">
+            <%= image_tag booking.exhibit.image, class: "my-bookings-image" %>
+            <div class="my-bookings-details">
+              <p><%= booking.exhibit.name %></p>
+              <p><%= booking.date %></p>
+              <p><%= booking.exhibit.artists.name %></p>
+            </div>    
+          </div>
         <% end %>
       <% end %>
-    </div>
   </div>
 
 </div>
