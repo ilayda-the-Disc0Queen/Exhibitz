@@ -26,18 +26,31 @@
           <div class="exhibit-image">
             <%= link_to image_tag(exhibit.image), exhibit_path(exhibit) %>
           </div>
+
           <div class="exhibit-info">
-            <h5><%= exhibit.name %></h5>
-            <hr width="50%" size="10" color="black">
-            <div class="exhibit-details">
-              <p>£<%= exhibit.price %></p>
-              <div class="dates">
-                <p><%= exhibit.start_date %></p>
-                <p><%= exhibit.close_date %></p>
-              </div>
+            <div class="exhibit-info-name">
+              <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
             </div>
+
+            <hr width="50%" size="10" color="black">
+
+            <div class="exhibit-info-left">
+              <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
+              <p class="m-1">              </p>
+            </div>
+
+            <div class="exhibit-info-right">
+              <% if exhibit.price == 0 %>
+                <p class="m-1">Free!</p>
+              <% else %>
+                <p class="m-1">£<%= exhibit.price %></p>
+              <% end %>
+              <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
+            </div>
+
           </div>
-         </div>
+
+        </div>
       <% end %>
     </div>
 </div>
