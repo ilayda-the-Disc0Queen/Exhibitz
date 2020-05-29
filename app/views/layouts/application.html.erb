@@ -24,7 +24,7 @@
       <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
         <div class="search-form-control form-group">
           <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
+          <button name="button" type="submit" class="btn btn-primary">
             <i class="fas fa-search"></i> Search
           </button>
         </div>
@@ -47,8 +47,8 @@
   </div>
 
     <!-- second navbar -->
-  <div class="second-navbar p-3 d-flex justify-content-around">
-    <div class="museum-dropdown dropdown">
+<!--   <div class="second-navbar p-3 d-flex justify-content-around">
+ --><!--     <div class="museum-dropdown dropdown">
       <button class="museum-dropbtn">Museums</button>
       <div class="museum-dropdown-content dropdown-content">
         <a href="<%= museums_path %>">All museums</a>
@@ -56,6 +56,7 @@
         <a href="#">List A - Z</a>
       </div>
     </div>
+
     <div class="dropdown artist-dropdown">
       <button class="artist-dropbtn">Artists</button>
       <div class="dropdown-content artist-dropdown-content">
@@ -63,6 +64,7 @@
         <a href="#">Featured</a>
       </div>
     </div>
+
     <div class="exhibit-dropdown dropdown">
       <button class="exhibit-dropbtn">Exhibits</button>
       <div class="exhibit-dropdown-content dropdown-content">
@@ -71,6 +73,7 @@
         <a href="#">List A - Z</a>
       </div>
     </div>
+
     <div class="style-dropdown dropdown">
       <button class="style-dropbtn">Styles</button>
       <div class="style-dropdown-content dropdown-content">
@@ -79,7 +82,40 @@
       </div>
     </div>
   </div>
+ -->
 
+  <div class="sub-navbar">
+    <div class="sub-dropdown">
+      <button class="sub-dropbtn">Museums</button>
+      <div class="sub-dropdown-content">
+        <a href="#">List A - Z</a>
+        <a href="/locations">Locations</a>
+      </div>
+    </div>
+
+    <div class="sub-dropdown">
+      <button class="sub-dropbtn">Artists</button>
+      <div class="sub-dropdown-content">
+        <a href="#">Featured Artists</a>
+        <a href="/artists">List A - Z</a>
+      </div>
+    </div>
+
+    <div class="sub-dropdown">
+      <button class="sub-dropbtn">Exhibits</button>
+      <div class="sub-dropdown-content">
+        <a href="#">Featured Exhibits</a>
+        <a href="/exhibits">List A - Z</a>
+      </div>
+    </div>
+
+    <div class="sub-dropdown">
+      <button class="sub-dropbtn">Styles</button>
+      <div class="sub-dropdown-content">
+        <a href="#">List A - Z</a>
+      </div>
+    </div>
+  </div>
 
       <!-- <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>-->
@@ -89,6 +125,7 @@
       <div class="push"></div>
 
     </div>
+
     <footer class="footer">
       <div class="footer-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
