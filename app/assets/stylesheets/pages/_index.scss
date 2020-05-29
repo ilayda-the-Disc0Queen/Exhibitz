@@ -48,6 +48,19 @@
   position: absolute;
 }
 
+.info-right {
+  float: right;
+  text-align: right;
+  max-width: 45%;
+}
+
+.info-left {
+  float: left;
+  text-align: left;
+  position: absolute;
+  max-width: 45%;
+}
+
 h5 {
   text-align: center;
 }

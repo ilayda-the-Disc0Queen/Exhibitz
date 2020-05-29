@@ -1,19 +1,42 @@
+
+  <div id="image-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://designmuseum.org/image/468089f8-5d37-4fd3-b546-664102cb6679?width=980&height=606" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://designmuseum.org/image/52a2fa64-1e63-4943-a875-a8521f89e7dd?width=980&height=606" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://designmuseum.org/image/93ff5829-2ddf-429f-8188-83ff23ec7fb3?width=980&height=606" alt="Third slide">
+      </div>
+      </div>
+     <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
 <h1><%= @exhibit.name %></h1>
 
 <div class="exhibits">
 
   <div class="exhibit-show-card">
     <div class="exhibit-info">
-      <div class="exhibit-info-left">
-        <p><%= link_to @exhibit.museum.name, @exhibit.museum.website %></p>
-        <p>Placeholder</p>
-      </div>
-
-      <div class="exhibit-info-right">
-        <% if @exhibit.price = 0 %>
-          <p>Free!</p>
+        <div class="info-left">
+          <p class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></p>
+          <p class="m-1"><a class="btn btn-primary booking-button"  type="button" data-toggle="modal" data-target="#exampleModal"  role="button">Book!</a>
+</p>
+        </div>
+      <div class="info-right">
+        <% if @exhibit.price == 0 %>
+          <p class="m-1">Free!</p>
         <% else %>
-          <p>£<%= @exhibit.price %></p>
+          <p class="m-1">£<%= @exhibit.price %></p>
         <% end %>
         <p><%= @exhibit.start_date %> - <%= @exhibit.close_date %></p>
       </div>
@@ -21,10 +44,6 @@
   </div>
 
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary booking-button" data-toggle="modal" data-target="#exampleModal">
-    Book!
-  </button>
-  <%# <a class="btn btn-primary booking-button"  type="button" data-toggle="modal" data-target="#exampleModal"  role="button">Book!</a> %>
 
 
   <!-- Modal -->
@@ -49,38 +68,21 @@
          <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <%# <button type="button" class="btn btn-primary">Add to My Bookings</button> %>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
-  
-  <div id="image-carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://i.kym-cdn.com/photos/images/newsfeed/001/331/480/20a.jpg" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://i.imgur.com/5mXfwr1.jpg" alt="Third slide">
-      </div>
-      </div>
-     <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
 
   <div class="about-the-artist">
-    <h2>About the artist</h2>
-    <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
-    <p><%= @exhibit.artists.first.info %></p>
+    <div class="info-left">
+      <h2>About the artist</h2>
+      <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
+      <p><%= @exhibit.artists.first.info %></p>
+    </div>
+  <div class="info-right">
+      <h2>About the museum</h2>
+      <h3><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
+      <p><%= @exhibit.museum.info %></p>
   </div>
-
 </div>
 
