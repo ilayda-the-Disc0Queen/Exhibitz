@@ -12,7 +12,13 @@
         <p><%= @museum.website %></p>
       </div>
     </div>
-    <p><%= @museum.info %></p>
+
+    <div class="museum-details">
+      <p><%= @museum.info  %></p>
+    </div>
+
+    <h4>Current exhibitions:</h4>
+
     <div class="exhibits-title"></div>
     <div class="exhibits">
       <% @museum.exhibits.each do  |exhibit| %>
