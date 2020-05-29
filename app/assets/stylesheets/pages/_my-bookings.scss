@@ -1,0 +1,41 @@
+.my-bookings-banner {
+  padding: 200px 0;
+  border: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1590749980/jessica-pamp-JNTSoyb_bbw-unsplash_ljl0mn.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 10%;
+}
+
+.my-bookings-banner h1 {
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: black;
+} 
+
+.my-bookings-list {
+  display: block;
+}
+
+.my-bookings-card {
+  display: flex;
+  max-height: 200px;
+}
+
+.my-bookings-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.my-bookings-details{
+  padding: 15px;
+  max-height: 87px;
+  line-height: 35px;
+}
+.image_tag {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
