@@ -35,6 +35,7 @@
       <div class="info-right">
         <% if @exhibit.price == 0 %>
           <p class="m-1">Free!</p>
+
         <% else %>
           <p class="m-1">£<%= @exhibit.price %></p>
         <% end %>
@@ -44,6 +45,7 @@
   </div>
 
   <!-- Button trigger modal -->
+
 
 
   <!-- Modal -->
@@ -73,8 +75,14 @@
     </div>
   </div>
 
+
+  <button type="button" class="btn btn-primary booking-button" data-toggle="modal" data-target="#exampleModal">
+    Book!
+  </button>
+
   <div class="about-the-artist">
     <div class="info-left">
+
       <h2>About the artist</h2>
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
       <p><%= @exhibit.artists.first.info %></p>
@@ -83,6 +91,7 @@
       <h2>About the museum</h2>
       <h3><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
       <p><%= @exhibit.museum.info %></p>
+
   </div>
 </div>
 

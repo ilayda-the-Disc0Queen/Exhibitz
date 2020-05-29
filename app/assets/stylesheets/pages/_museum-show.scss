@@ -1,26 +1,37 @@
-.museum {
 
+.museum-image {
+  height: 500px ;
+  width: 100%;
+  background-size: cover;
+  background-position: cover;
 }
 
 .museum-image img{
-  // padding: 200px 0;
   border: 0;
-  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1590596799/khara-woods-KR84RpMCb0w-unsplash_rs46pn.jpg');
-  background-size: cover;
-  background-position: center;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  height: 10%;
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .museum-info {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.museum-details {
+  margin-bottom: 50px;
 }
 
 .address-website {
   display: block;
   text-align: left;
+}
+.exhibit-card {
+  height: 420px;
 }
 
 .exhibit-details {
