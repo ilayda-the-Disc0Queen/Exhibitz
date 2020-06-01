@@ -12,10 +12,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     start_date = Date.strptime(@exhibit.start_date, '%d/%m/%Y')
     close_date = Date.strptime(@exhibit.close_date, '%d/%m/%Y')
-    
+
     # binding.pry
-    
-    if @booking.date == nil 
+
+    if @booking.date == nil
       render :error
     elsif (close_date < @booking.date ) || (start_date > @booking.date)
       render :dateserror
@@ -30,14 +30,10 @@ class BookingsController < ApplicationController
       end
     end
   end
-  
+
   private
 
-    def booking_params
-      params.require(:booking).permit(:date, :user_id, :exhibit_id, :card_details, :number_of_tickets, :card_holder_name, :expiry_date, :cvc)
-    end
-
-
+  def booking_params
+    params.require(:booking).permit(:date, :user_id, :exhibit_id, :card_details, :number_of_tickets, :card_holder_name, :expiry_date, :cvc)
   end
-  
 end
