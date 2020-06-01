@@ -13,9 +13,7 @@ class BookingsController < ApplicationController
     start_date = Date.strptime(@exhibit.start_date, '%d/%m/%Y')
     close_date = Date.strptime(@exhibit.close_date, '%d/%m/%Y')
 
-    # binding.pry
-
-    if @booking.date == nil
+    if (@booking.date == nil) || (@booking.number_of_tickets == nil) || (@booking.card_holder_name == nil) || (@booking.card_details == nil) || (@booking.expiry_date == nil) || (@booking.cvc == nil)
       render :error
     elsif (close_date < @booking.date ) || (start_date > @booking.date)
       render :dateserror

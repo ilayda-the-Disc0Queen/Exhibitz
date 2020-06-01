@@ -67,7 +67,7 @@
               <h5>Make your payment</h5>
               <%= f.input :card_holder_name %>
               <%= f.input :card_details %>
-              <%= f.input :expiry_date %>
+              <%= f.input :expiry_date, as: :date, html5: true %>
               <%= f.input :cvc %>
 
               <%= f.submit "Book!", :class => "btn btn-primary" %>
