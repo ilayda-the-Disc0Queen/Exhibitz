@@ -62,7 +62,14 @@
             <%= simple_form_for [ @exhibit, @booking ], remote: true do |f| %>
               <h5>Start: <strong> <%=  @exhibit.start_date %> </strong> </h5>
               <h5>Close: <strong> <%=  @exhibit.close_date %> </strong> </h5>
+              <%= f.input :number_of_tickets %>
               <%= f.input :date, as: :date, html5: true %>
+              <h5>Make your payment</h5>
+              <%= f.input :card_holder_name %>
+              <%= f.input :card_details %>
+              <%= f.input :expiry_date %>
+              <%= f.input :cvc %>
+
               <%= f.submit "Book!", :class => "btn btn-primary" %>
               <div id="message"></div>
             <% end %>
