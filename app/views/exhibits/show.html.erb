@@ -1,3 +1,8 @@
+<div class="exhibitsbook d-flex justify-content-between">
+  <div class="exhibits_info_book">
+    <h1><%= @exhibit.name %></h1>
+    <p class="m-1"><a class="btn btn-secondary booking-button"  type="button" data-toggle="modal" data-target="#exampleModal"  role="button">Book!</a>
+  </div>
 
   <div id="image-carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -20,8 +25,9 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
 
-<h1><%= @exhibit.name %></h1>
+<!-- <h1><%= @exhibit.name %></h1> -->
 
 <div class="exhibits">
 
@@ -29,7 +35,6 @@
     <div class="exhibit-info">
         <div class="info-left">
           <p class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></p>
-          <p class="m-1"><a class="btn btn-secondary booking-button"  type="button" data-toggle="modal" data-target="#exampleModal"  role="button">Book!</a>
           </p>
         </div>
       <div class="info-right">
