@@ -31,45 +31,56 @@
   </head>
   <body>
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/dofvu2msx/image/upload/v1591005553/Screenshot_2020-05-28_at_17.17.48_q4lrne-1_u7f7ui.png", :class => "logo", :crop => :fill %>
-  <% end %>
 
+<nav class="navbar navbar-light bg-white navbar-expand-md" id="navbar">
+  <a class="navbar-brand" href="/"><%= image_tag "https://res.cloudinary.com/dofvu2msx/image/upload/v1591005553/Screenshot_2020-05-28_at_17.17.48_q4lrne-1_u7f7ui.png", :width => "170", :height => "59", :crop => :fill %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-    <div class="search-form-control form-group">
-      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-primary">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
-  </form>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <form class="form-inline my-2 my-lg-0">
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <div class="search-form-control form-group">
+            <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+            <button name="button" type="submit" class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+    </form>
+
     <ul class="navbar-nav mr-auto">
+      <% if user = current_user %>
+        <li class="nav-item">
+          <a class="nav-link" href="/favourites">Favourites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/bookings">Bookings</a>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_user_session_path %>">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_user_registration_path %>">Sign up</a>
+        </li>
+      <% end %>
 
-    <% if current_user %>
-      <li class="nav-item"><%= link_to "Bookings", "/bookings", class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Favourites", "/favourites", class: "nav-link" %></li>
-    <% else %>
-      <li class="nav-item"><%= link_to "Sign Up", "/bookings", class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Log In", "/bookings", class: "nav-link" %></li>
-    <% end %>
-
-      <li class="nav-item dropdown">
-        <%= image_tag "https://toppng.com/uploads/preview/app-icon-set-login-icon-comments-avatar-icon-11553436380yill0nchdm.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Log Out", "#", class: "dropdown-item" %>
-        </div>
-      </li>
+      <% if user = current_user %>
+        <li class="nav-item dropdown">
+          <%= image_tag "https://www.pngitem.com/pimgs/m/22-224287_computer-icons-user-profile-avatar-caller-id-icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete" >Log out</a>
+          </div>
+        </li>
+      <% else %>
+      <% end %>
     </ul>
-  </div>
 
-</div>
+  </div>
+</nav>
 
 <!-- Sub Navbar
  -->
