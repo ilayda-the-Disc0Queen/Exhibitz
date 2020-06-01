@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
   end
-  
+
 
   def create
     @booking = Booking.new(booking_params)
@@ -32,9 +32,12 @@ class BookingsController < ApplicationController
   end
   
   private
-  
-  def booking_params
-    params.require(:booking).permit(:date, :user_id, :exhibit_id)
+
+    def booking_params
+      params.require(:booking).permit(:date, :user_id, :exhibit_id, :card_details, :number_of_tickets, :card_holder_name, :expiry_date, :cvc)
+    end
+
+
   end
   
 end
