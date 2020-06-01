@@ -1,5 +1,15 @@
 // SHOW PAGE
 
+.exhibits_info_book {
+  margin-left: 25px;
+  width: 30vw !important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
 .exhibit-show-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -15,6 +25,7 @@
   text-align: center;
   margin: 10px;
   margin-bottom: 25px;
+  margin-right: 10px;
 
 }
 
@@ -34,21 +45,28 @@
   padding: 15px;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
+// h1 {
+//   text-align: center;
+//   margin-top: 30px !important;
+//   margin-bottom: 30px !important;
+// }
 
 .booking-button {
-  width: auto;
+  width: 150px !important;
+  height: 80px;
   margin: 10px;
   padding: 3px;
+  text-align: center;
+  background-color: #A9A9A9 !important;
+  border: 0px;
+  font-size: 20px !important;
 }
 
 .image-carousel {
   vertical-align: middle;
   text-align: center;
+  width: 70vw;
+  margin-right: 5px;
 }
 
 .carousel-item img {
