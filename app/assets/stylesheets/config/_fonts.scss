@@ -1,9 +1,12 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Playfair+Display:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Playfair+Display:wght@600&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+// $body-font: "Amiri", "serif";
+$body-font: "Frank Ruhl Libre", "serif";
+$headers-font: "Playfair Display", "serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
