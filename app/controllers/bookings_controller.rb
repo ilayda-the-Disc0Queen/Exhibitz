@@ -10,24 +10,31 @@ class BookingsController < ApplicationController
     @exhibit = Exhibit.find(params[:exhibit_id])
     @booking.exhibit = @exhibit
     @booking.user = current_user
-    # if @booking.date = nil
-    #    render :error
-    # end
-    if @booking.save
-      # respond_to do |format|
-      #   format.js {render "success.js.erb"}
-      # end
-      render :success
-
+    start_date = Date.strptime(@exhibit.start_date, '%d/%m/%Y')
+    close_date = Date.strptime(@exhibit.close_date, '%d/%m/%Y')
+    
+    # binding.pry
+    
+    if @booking.date == nil 
+      render :error
+    elsif (close_date < @booking.date ) || (start_date > @booking.date)
+      render :dateserror
     else
-      # render :error
+      if @booking.save
+        # respond_to do |format|
+        #   format.js {render "success.js.erb"}
+        # end
+        render :success
+      else
+        # render :error
+      end
     end
   end
-
+  
   private
-
-    def booking_params
-      params.require(:booking).permit(:date, :user_id, :exhibit_id)
-    end
-
+  
+  def booking_params
+    params.require(:booking).permit(:date, :user_id, :exhibit_id)
   end
+  
+end

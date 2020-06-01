@@ -25,6 +25,8 @@
   max-height: 200px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+  height: 200px;
 }
 
 .my-bookings-image {
@@ -51,5 +53,13 @@
 }
 
 .details-location {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+#message {
+  color: green;
+}
+
+#fail-message {
+  color: red;
 }
