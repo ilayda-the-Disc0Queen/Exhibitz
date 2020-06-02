@@ -2,6 +2,29 @@
   <div class="exhibits_info_book">
     <h1><%= @exhibit.name %></h1>
     <p class="m-1"><a class="btn btn-secondary booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
+       <!-- AddEvent button -->
+    <div class="addeventatc my-3" data-styling="none">
+      <div class="date">
+        <span class="mon"><%= I18n.t("date.abbr_month_names")[Date.today.month] %></span>
+        <span class="day"><%= Date.today.day %></span>
+        <div class="bdr1"></div>
+        <div class="bdr2"></div>
+      </div>
+      <div class="desc">
+        <p>
+          <strong class="hed"><%= @exhibit.name %></strong>
+          <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
+        </p>
+      </div>
+      <span class="start"><%=  @booking.date %> 01:00 PM</span> <!-- change to :date, as: :date, html5: true -->
+        <span class="end"><%=  Date.today.to_s %> 05:00 PM</span>
+        <span class="timezone">UTC</span>
+        <span class="title"><%= @exhibit.name %></span>
+        <span class="description"><%= @exhibit.artists.first.info %></span>
+        <span class="location"><%= @exhibit.museum.address %></span>
+        <span class="organizer"><%= @exhibit.museum.name %></span>
+    </div>
+
   </div>
 
   <div id="image-carousel" class="carousel slide" data-ride="carousel">
@@ -25,60 +48,29 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
 </div>
 
-<h1><%= @exhibit.name %></h1>
 
-<!-- Add to cal feature -->
-  <div class="addeventatc" data-styling="none">
-    <div class="date">
-      <span class="mon">JUN</span> <!-- change to be dates selected from book button! -->
-      <span class="day">18</span>
-      <div class="bdr1"></div>
-      <div class="bdr2"></div>
-    </div>
-    <div class="desc">
-      <p>
-        <strong class="hed"><%= @exhibit.name %></strong>
-        <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
-      </p>
-    </div>
-    <span class="start"><%=  @exhibit.start_date.gsub("/", "-") %> 01:00 PM</span>
-      <span class="end"><%=  @exhibit.close_date.gsub("/", "-") %> 05:00 PM</span>
-    <span class="timezone">UTC</span>
-    <span class="title"><%= @exhibit.name %></span>
-    <span class="description"><%= @exhibit.artists.first.info %></span>
-    <span class="location"><%= @exhibit.museum.address %></span>
-    <span class="organizer"><%= @exhibit.museum.name %></span>
-  </div>
-  <style type="text/css">
-      .addeventatc_dropdown {padding:6px 0px;}
-      .addeventatc_dropdown .copyx {display:none;}
-    </style>
-
-
-<div class="exhibits">
 
 <div class="exhibits d-flex justify-content-between">
   <div class="exhibit-show-card">
     <div class="exhibit-info">
         <div class="info-left">
           <p class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></p>
-          </p>
         </div>
       <div class="info-right">
         <% if @exhibit.price == 0 %>
           <p class="m-1">Free!</p>
-
         <% else %>
           <p class="m-1">£<%= @exhibit.price %></p>
         <% end %>
         <p><%= @exhibit.start_date %> - <%= @exhibit.close_date %></p>
-
-
       </div>
+
     </div>
   </div>
+</div>
 
   <!-- Button trigger modal -->
 
@@ -119,7 +111,6 @@
     </div>
   </div>
 
-
   <div class="about-the-artist">
     <div class="info-left">
 
@@ -127,7 +118,7 @@
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
       <p><%= @exhibit.artists.first.info %></p>
     </div>
-</div>
+  </div>
 
 <!-- <div class="about-the-museum-card">
     <h2>About the museum</h2>
