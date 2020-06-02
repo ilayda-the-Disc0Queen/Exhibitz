@@ -1,6 +1,15 @@
-.navbar-brand {
-  padding: 4px;
-  margin-right: 10vw;
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 170px;
+  height: 59px;
 }
 
 .search-form-control {
@@ -22,7 +31,3 @@
   width: 50%;
 }
 
-#navbar {
-  display: flex;
-  align-items: center;
-}

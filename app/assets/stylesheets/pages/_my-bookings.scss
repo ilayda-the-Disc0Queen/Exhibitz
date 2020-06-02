@@ -30,17 +30,27 @@
 
 .my-bookings-image {
   height: 240px;
-  width: 50%;
+  width: 45%;
   object-fit: cover;
 }
 .my-bookings-details{
-  display: inline;
+  display: inline-block;
   padding: 16px;
-  max-height: 87px;
+  // max-height: 87px;
   line-height: 35px;
   padding-left: 32px;
-
+  width: 610px;;
 }
+
+.booking-info p {
+  font-size: 20px;
+}
+
+.booking-info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .image_tag {
   height: 200px;
   width: 100%;
@@ -48,7 +58,9 @@
 }
 
 .details-name {
-  font-size: 32px;
+  font-size: 36px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .details-location {
