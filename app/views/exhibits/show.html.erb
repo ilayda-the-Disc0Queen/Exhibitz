@@ -1,7 +1,9 @@
 <div class="exhibitsbook d-flex justify-content-between">
   <div class="exhibits_info_book">
     <h1><%= @exhibit.name %></h1>
-    <p class="m-1"><a class="btn btn-secondary booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
+    <% if @exhibit.price != 0 %>
+      <p class="m-1"><a class="btn btn-light booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
+    <% end %>
        <!-- AddEvent button -->
     <div class="addeventatc my-3" data-styling="none">
       <div class="date">
