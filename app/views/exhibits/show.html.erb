@@ -12,18 +12,17 @@
       </div>
       <div class="desc">
         <p>
-          <strong class="hed">The Whitest Boy Alive</strong>
-          <span class="des">Location: The Lost Church<br />When: 9 PM - 11 PM</span>
+          <strong class="hed"><%= @exhibit.name %></strong>
+          <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
         </p>
       </div>
-      <span class="start">06/18/2015 09:00 AM</span>
-        <span class="end">06/18/2015 11:00 AM</span>
-      <span class="timezone">Europe/Paris</span>
-      <span class="title">Summary of the event</span>
-        <span class="description">Description of the event</span>
-        <span class="location">Location of the event</span>
-        <span class="organizer">Organizer</span>
-        <span class="organizer_email">Organizer e-mail</span>
+      <span class="start"><%=  @exhibit.start_date.gsub("/", "-") %> 01:00 PM</span>
+        <span class="end"><%=  @exhibit.close_date.gsub("/", "-") %> 05:00 PM</span>
+      <span class="timezone">UTC</span>
+      <span class="title"><%= @exhibit.name %></span>
+        <span class="description"><%= @exhibit.artists.first.info %></span>
+        <span class="location"><%= @exhibit.museum.address %></span>
+        <span class="organizer"><%= @exhibit.museum.name %></span>
     </div>
 
   </div>
