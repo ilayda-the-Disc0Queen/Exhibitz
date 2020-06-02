@@ -1,4 +1,5 @@
 class ExhibitsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @exhibits = Exhibit.all
   end
