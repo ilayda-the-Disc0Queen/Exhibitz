@@ -19,16 +19,18 @@
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 8px;
+  margin-bottom: 35px;
   background-color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .museum-details {
   margin-bottom: 16px;
   background-color: white;
-  padding: 16px 0 16px 0;
+  padding: 20px 30px 16px 30px;
 }
 
 .address-website {
@@ -77,5 +79,5 @@
 }
 
 .museum-details p {
-  font-family: sans-serif;
+  // font-family: sans-serif;
 }
