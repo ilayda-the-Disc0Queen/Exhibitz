@@ -1,7 +1,7 @@
 <div class="exhibitsbook d-flex justify-content-between">
   <div class="exhibits_info_book">
     <h1><%= @exhibit.name %></h1>
-    <p class="m-1"><a class="btn btn-secondary booking-button"  type="button" data-toggle="modal" data-target="#exampleModal"  role="button">Book!</a>
+    <p class="m-1"><a class="btn btn-secondary booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
   </div>
 
   <div id="image-carousel" class="carousel slide" data-ride="carousel">
@@ -29,8 +29,7 @@
 
 <!-- <h1><%= @exhibit.name %></h1> -->
 
-<div class="exhibits">
-
+<div class="exhibits d-flex justify-content-between">
   <div class="exhibit-show-card">
     <div class="exhibit-info">
         <div class="info-left">
@@ -96,11 +95,11 @@
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
       <p><%= @exhibit.artists.first.info %></p>
     </div>
-  <div class="info-right">
-      <h2>About the museum</h2>
-      <h3><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
-      <p><%= @exhibit.museum.info %></p>
-
-  </div>
 </div>
+
+<!-- <div class="about-the-museum-card">
+    <h2>About the museum</h2>
+    <h3><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
+    <p><%= @exhibit.museum.info %></p>
+</div> -->
 
