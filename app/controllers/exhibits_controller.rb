@@ -7,5 +7,6 @@ class ExhibitsController < ApplicationController
   def show
     @exhibit = Exhibit.find(params[:id])
     @booking = Booking.new
+    @my_booking = Booking.where(exhibit: @exhibit, user: current_user).last
   end
 end
