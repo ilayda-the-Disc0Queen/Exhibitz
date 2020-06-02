@@ -7,8 +7,8 @@
        <!-- AddEvent button -->
     <div class="addeventatc my-3" data-styling="none">
       <div class="date">
-        <span class="mon"><%= I18n.t("date.abbr_month_names")[Date.today.month] %></span>
-        <span class="day"><%= Date.today.day %></span>
+        <span class="mon"><%= I18n.t("date.abbr_month_names")[@my_booking.present? ? @my_booking.date.month : Date.today.month] %></span>
+        <span class="day"><%= @my_booking.present? ? @my_booking.date.day : Date.today.day %></span>
         <div class="bdr1"></div>
         <div class="bdr2"></div>
       </div>
@@ -18,8 +18,8 @@
           <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
         </p>
       </div>
-      <span class="start"><%=  @booking.date %> 01:00 PM</span> <!-- change to :date, as: :date, html5: true -->
-        <span class="end"><%=  Date.today.to_s %> 05:00 PM</span>
+      <span class="start"><%=  @my_booking.present? ? @my_booking.date : Date.today %> 01:00 PM</span> <!-- change to :date, as: :date, html5: true -->
+        <span class="end"><%=  @my_booking.present? ? @my_booking.date : Date.today %> 05:00 PM</span>
         <span class="timezone">UTC</span>
         <span class="title"><%= @exhibit.name %></span>
         <span class="description"><%= @exhibit.artists.first.info %></span>
