@@ -9,10 +9,12 @@
           <div class="my-bookings-card">
             <%= image_tag booking.exhibit.image, class: "my-bookings-image" %>
             <div class="my-bookings-details">
-              <div><h2 class="details-name"><strong><%= booking.exhibit.name %></strong></h2></div>
+              <div>
+                <h2 class="details-name"><%= link_to booking.exhibit.name, exhibit_path(booking.exhibit) %></h2>
+              </div>
               <div class="booking-info">
                 <p><%= booking.date %></p>
-                <p class="details-location"><strong>@</strong> <%= booking.exhibit.museum.name %></p>
+                <p class="details-location"><strong>@ </strong><%= link_to booking.exhibit.museum.name, museum_path(booking.exhibit.museum) %></p></p>
                 <p>£<%= booking.exhibit.price %></p>
               </div>   
             </div>
