@@ -16,7 +16,7 @@
           <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
         </p>
       </div>
-      <span class="start"><%=  Date.today.to_s %> 01:00 PM</span>
+      <span class="start"><%=  @booking.date %> 01:00 PM</span> <!-- change to :date, as: :date, html5: true -->
         <span class="end"><%=  Date.today.to_s %> 05:00 PM</span>
         <span class="timezone">UTC</span>
         <span class="title"><%= @exhibit.name %></span>
