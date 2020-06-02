@@ -1,15 +1,18 @@
 
 <div class="museum-image">
-  <%= link_to image_tag(@museum.image), @museum.website %>
+  <%= link_to image_tag(@museum.image), @museum.website, target: :_blank %>
 </div>
 
 
 <div class="container">
     <div class="museum-info">
-      <h2><%= @museum.name %></h2>
+      <div class="museum-name">
+        <h2><%= @museum.name %></h2>
+      </div>
+      
       <div class="address-website">
-        <p><%= @museum.address %></p>
-        <p><%= @museum.website %></p>
+        <div><p><%= @museum.address %></p></div>
+        <div><p><%= @museum.website %></p></div>
       </div>
     </div>
 
@@ -28,7 +31,7 @@
           </div>
 
           <div class="exhibit-info">
-            <div class="exhibit-info-name">
+            <div>
               <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
             </div>
 

@@ -1,6 +1,6 @@
 
 .museum-image {
-  height: 500px ;
+  height: 400px ;
   width: 100%;
   background-size: cover;
   background-position: cover;
@@ -10,7 +10,7 @@
   border: 0;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  height: 500px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
@@ -20,15 +20,21 @@
   justify-content: space-between;
   margin-top: 40px;
   margin-bottom: 20px;
+  background-color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border: 0;
 }
 
 .museum-details {
   margin-bottom: 50px;
+  background-color: white;
 }
 
 .address-website {
   display: block;
-  text-align: left;
+  align-items: center;
+  padding-top: 16px;
+  text-align: right;
 }
 .exhibit-card {
   height: 420px;
@@ -62,4 +68,13 @@
 .artistindexbanner h1 {
   color: white;
   letter-spacing: 3px;
+}
+
+.museum-name {
+  display: flex;
+  align-items: center;
+}
+
+.museum-details p {
+  font-family: sans-serif;
 }
