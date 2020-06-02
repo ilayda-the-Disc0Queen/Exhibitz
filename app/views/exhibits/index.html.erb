@@ -21,7 +21,7 @@
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
 
               <% if exhibit.favourites.exists? %>
-                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), remote: true, method: :delete %></p>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), method: :delete %></p>
               <% else  %>
                 <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios/32/000000/like.png", height: "20px", width: "20px"), exhibit_favourites_path(exhibit), remote: true, method: :post %></p>
               <% end %>
@@ -93,7 +93,7 @@
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
 
               <% if exhibit.favourites.exists? %>
-                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), remote: true, method: :delete %></p>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), method: :delete %></p>
               <% else  %>
                 <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios/32/000000/like.png", height: "20px", width: "20px"), exhibit_favourites_path(exhibit), remote: true, method: :post %></p>
               <% end %>

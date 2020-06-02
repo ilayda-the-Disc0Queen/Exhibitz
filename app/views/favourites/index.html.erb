@@ -19,7 +19,7 @@
 
             <div class="exhibit-info-left">
               <p class="m-1"><%= link_to favourite.exhibit.museum.name, favourite.exhibit.museum.website %></p>
-              <p class="m-1"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(favourite), remote: true, method: :delete %></p>
+              <p class="m-1"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(favourite), method: :delete %></p>
             </div>
 
             <div class="exhibit-info-right">
