@@ -1,6 +1,6 @@
 <div class="indexbanner"><h1>Never miss an exhibition again</h1></div>
 
-<h1>Our recommendations</h1>
+<h2>Our recommendations</h2>
 
     <div class="exhibits">
 
@@ -19,12 +19,12 @@
 
             <div class="exhibit-info-left">
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
-              <p class="m-1">
-                <a href="/">
-                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
-                   width="20" height="20">
-                </a>
-              </p>
+
+              <% if exhibit.favourites.exists? %>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), method: :delete %></p>
+              <% else  %>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios/32/000000/like.png", height: "20px", width: "20px"), exhibit_favourites_path(exhibit), remote: true, method: :post %></p>
+              <% end %>
             </div>
 
             <div class="exhibit-info-right">
@@ -44,7 +44,7 @@
     </div>
 
 
-<h1>Artist of the week</h1>
+<h2>Artist of the week</h2>
 
 <div class="ft-artist-card">
   <div class="ft-artist-image">
@@ -57,7 +57,7 @@
   </div>
 </div>
 
-<h1>Did you know?</h1>
+<h2>Did you know?</h2>
 
 <div class="ft-museum-card">
   <div class="ft-museum-card-info">
@@ -71,7 +71,7 @@
 
 </div>
 
-<h1>All Exhibits</h1>
+<h2>All Exhibits</h2>
 
   <div class="exhibits">
 
@@ -90,13 +90,13 @@
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
-              <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
-              <p class="m-1">
-                <a href="/">
-                   <img alt="heart" src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
-                   width="20" height="20">
-                </a>
-              </p>
+              <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
+
+              <% if exhibit.favourites.exists? %>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(exhibit.favourites.first), method: :delete %></p>
+              <% else  %>
+                <p class="m-1" id="exhibit-<%= exhibit.id %>"><%= link_to image_tag("https://img.icons8.com/ios/32/000000/like.png", height: "20px", width: "20px"), exhibit_favourites_path(exhibit), remote: true, method: :post %></p>
+              <% end %>
             </div>
 
             <div class="exhibit-info-right">

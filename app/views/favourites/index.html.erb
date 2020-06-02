@@ -1,0 +1,42 @@
+<% if @favourites != [] %>
+  <h1>All Favourites</h1>
+
+  <div class="exhibits">
+
+      <% @favourites.each do |favourite| %>
+
+        <div class="exhibit-card">
+          <div class="exhibit-image">
+            <%= link_to image_tag(favourite.exhibit.image), exhibit_path(favourite.exhibit) %>
+          </div>
+
+          <div class="exhibit-info">
+            <div class="exhibit-info-name">
+              <h5><%= link_to favourite.exhibit.name, exhibit_path(favourite.exhibit) %></h5>
+            </div>
+
+            <hr width="50%" size="10" color="black">
+
+            <div class="exhibit-info-left">
+              <p class="m-1"><%= link_to favourite.exhibit.museum.name, favourite.exhibit.museum.website %></p>
+              <p class="m-1"><%= link_to image_tag("https://img.icons8.com/ios-filled/32/000000/like.png", height: "20px", width: "20px"), favourite_path(favourite), method: :delete %></p>
+            </div>
+
+            <div class="exhibit-info-right">
+              <% if favourite.exhibit.price == 0 %>
+                <p class="m-1">Free!</p>
+              <% else %>
+                <p class="m-1">£<%= favourite.exhibit.price %></p>
+              <% end %>
+              <p><%= favourite.exhibit.start_date %> - <%= favourite.exhibit.close_date %></p>
+            </div>
+
+          </div>
+
+        </div>
+
+    <% end %>
+  </div>
+<% else %>
+    <h1>You haven't favourited any exhibits yet!</h1>
+<% end %>
