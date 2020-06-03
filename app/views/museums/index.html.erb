@@ -10,8 +10,10 @@
 
       <div class="museum-index-info">
         <h4><%= link_to museum.name, museum_path(museum)%></h4>
-        <p>Address: <%= museum.address %></p>
+        <!-- <p>Address: <%= museum.address %></p> -->
         <p>Opening hours: <%= museum.opening_hours %></p>
+        <p>Address: <%= museum.address %></p>
+        <p>About the museum: <%= museum.info.truncate(155) %></p>
       </div>
     </div>
   <% end %>
