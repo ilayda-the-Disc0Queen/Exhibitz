@@ -1,4 +1,4 @@
-/*.dropbtn {
+.dropbtn {
   background-color: #e4e4e4;
   color: white;
   padding: 16px;
@@ -72,6 +72,7 @@
 .sub-dropdown {
   float: left;
   overflow: hidden;
+  width: 25%;
 }
 
 /* Dropdown button */
@@ -83,6 +84,7 @@
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  width: 100%;
 }
 
 /* Dropdown content (hidden by default) */
@@ -95,6 +97,7 @@
   border-left: rgba(0,0,0,0.05) solid .05px;
   border-right: rgba(0,0,0,0.05) solid .05px;
   border-bottom: rgba(0,0,0,0.05) solid .05px;
+  width: 25vw;
 }
 
 /* Links inside the dropdown */
