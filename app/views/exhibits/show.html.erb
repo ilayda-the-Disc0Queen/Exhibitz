@@ -1,6 +1,6 @@
 <div class="exhibitsbook d-flex justify-content-between">
   <div class="exhibits_info_book">
-    <h1><%= @exhibit.name %></h1>
+    <h1 style="text-align: center; font-size: 64px;"><%= @exhibit.name %></h1>
     <% if @exhibit.price != 0 %>
       <p class="m-1"><a class="btn btn-light booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
     <% end %>
@@ -55,7 +55,7 @@
 
 
 
-<div class="exhibits d-flex justify-content-between">
+<!-- div class="exhibits d-flex justify-content-between">
   <div class="exhibit-show-card">
     <div class="exhibit-info">
         <div class="info-left">
@@ -72,7 +72,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
   <!-- Button trigger modal -->
 
@@ -113,18 +113,23 @@
     </div>
   </div>
 
-  <div class="about-the-artist">
-    <div class="info-left">
-
+  <div class="exhibit-show-info-card mx-4">
+    <div class="exhibit-show-info-1">
       <h2>About the artist</h2>
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
       <p><%= @exhibit.artists.first.info %></p>
     </div>
+    <div class="exhibit-show-info-2">
+      <h2 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h2>
+      <% if @exhibit.price == 0 %>
+        <h3 class="my-3">Free!</h3>
+      <% else %>
+        <h3 class="m-1">£<%= @exhibit.price %></h3>
+      <% end %>
+      <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
+        <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
+    </div>
+    <div class="exhibit-show-card-basic">
+      <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>">
+    </div>
   </div>
-
-<!-- <div class="about-the-museum-card">
-    <h2>About the museum</h2>
-    <h3><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
-    <p><%= @exhibit.museum.info %></p>
-</div> -->
-

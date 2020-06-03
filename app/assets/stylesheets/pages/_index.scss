@@ -71,6 +71,7 @@
   float: right;
   text-align: right;
   max-width: 45%;
+  position: absolute;
 }
 
 .info-left {
@@ -137,7 +138,7 @@ h5 {
 
 .ft-artist-card-info {
   padding: 20px;
-  overflow-y:auto;
+  overflow-y: auto;
 }
 
 .ft-museum-card-info {
@@ -289,3 +290,4 @@ h5 {
   }
 
 }
+ 

@@ -1,7 +1,7 @@
 // SHOW PAGE
 
 .exhibits_info_book {
-  margin-left: 25px;
+  margin-left: 64px;
   width: 30vw !important;
   align-items: center;
   display: flex;
@@ -118,3 +118,70 @@ h1 {
 .carousel-control-next {
   right: 10%;
 }
+
+// ------------------------------------------
+.exhibit-show-info-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 12px;
+  overflow: hidden;
+  flex: 50%;
+  // max-width: 50%;
+  height: 300px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.exhibit-show-info-1 {
+  padding: 20px;
+  overflow-y: auto;
+  width: 50%;
+  margin: 20px 20px;
+}
+
+.exhibit-show-info-2 {
+  padding: 20px;
+  overflow-y: auto;
+  width: 25%;
+  background-color: #f1f1f1;
+  margin: 20px 0px;
+}
+
+.exhibit-show-info-h3 {
+  font-size: 1.5rem;
+}
+
+#ex_show_artist_card {
+  padding-left: 0;
+}
+
+.exhibit-show-card-basic {
+  padding: 20px 20px 20px 0px;
+  overflow-y: auto;
+  width:30%;
+}
+
+.exhibit-show-card-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
