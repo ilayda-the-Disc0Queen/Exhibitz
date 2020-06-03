@@ -109,8 +109,9 @@ h1 {
 
 // ------------------------------------------
 .exhibit-show-info-card {
-  background-color: #f4f4f4;
-  // box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  // background-color: #f4f4f4;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 40px;
   overflow: hidden;
   flex: 50%;
@@ -123,11 +124,14 @@ h1 {
 }
 
 .exhibit-show-info-1 {
-  padding: 60px;
+  // padding: 60px;
   overflow-y: auto;
   width: 50%;
   margin: 20px 20px;
+  // margin-left: 30px;
+  // margin-top: 20px;
   height: 100%;
+  text-align: justify;
 
 }
 
@@ -135,11 +139,13 @@ h1 {
   padding: 20px;
   overflow-y: auto;
   width: 25%;
-  // background-color: #f1f1f1;
-  background-color: white;
-  margin: 20px 90px;
+  background-color: #f1f1f1;
+  // background-color: white;
+  margin-top: 20px;
+  // margin-right: 30px;
+  margin-left: 30px;
   height: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  // box-shadow: 0 0 10px rgba(0,0,0,0.1);
   // border: 1px solid #85929E;
 }
 
@@ -160,4 +166,6 @@ h1 {
 .exhibit-show-card-image {
   height: 100%;
   object-fit: cover;
+  height: 200px;
+  width: 100%;
 }
