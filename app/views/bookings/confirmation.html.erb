@@ -15,33 +15,21 @@
       </div>
 
       <div class="date-museum">
-        <div class="lebel"><p><%= @booking.date.strftime("%m/%d/%Y") %></p></div>
         <div><p class="details-location"><%= link_to @booking.exhibit.museum.name, museum_path(@booking.exhibit.museum) %></p></div>
       </div>
-
-      <div class="exhibit-name">
-        <div></div>
-        <div class="label">
+      <div class="booking-info">
+        <div class="labels">
+          <p>Date: </p>
           <p>Number of tickets: </p>
-        </div>
-        <div class="name">
-          <h4 class="pound numbers"><%= @booking.number_of_tickets %></h4>
-        </div>
-        <div></div>
-      </div>
-
-      <div class="exhibit-name">
-        <div></div>
-        <div class="label">
           <p>Booking total: </p>
         </div>
-        <div class="tickets">
-          <div><h4 class="pound numbers">£</h4></div>
-          <div><h4 class="pound numbers"><%= (@booking.exhibit.price * @booking.number_of_tickets) %></h4></div>
-        </div>
-        <div></div>
-      </div>
 
+        <div class="values">
+          <p class="pound numbers"><%= @booking.date.strftime("%m/%d/%Y") %></p>
+          <p class="pound numbers"><%= @booking.number_of_tickets %></p>
+          <p class="pound numbers">£<%= (@booking.exhibit.price * @booking.number_of_tickets) %></p>
+        </div>
+      </div>
       
     </div>
   </div>
