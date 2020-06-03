@@ -1,9 +1,22 @@
 <div class="exhibitsbook d-flex justify-content-between">
   <div class="exhibits_info_book">
-    <h1 style="text-align: center; font-size: 64px;"><%= @exhibit.name %></h1>
+    <h1 style="text-align: center; font-size: 50px;"><%= @exhibit.name %></h1>
+    <div class="heart-hover">
+      <% if @exhibit.favourites.exists? %>
+        <%= link_to favourite_path(@exhibit.favourites.first), remote: true, method: :delete, class: "heart" do %>
+          <%= image_tag "https://res.cloudinary.com/dofvu2msx/image/upload/v1591205183/1077086_g6l2mi.png", size: "42x42", alt: "all" %>
+        <% end %>
+      <% else  %>
+        <%= link_to exhibit_favourites_path(@exhibit), remote: true, method: :post, class: "heart" do %>
+          <%= image_tag "https://res.cloudinary.com/dofvu2msx/image/upload/v1591205208/1077035_jefhyk.png", size: "42x42", alt: "all" %>
+        <% end %>
+      <% end %>
+    </div>
+
     <% if @exhibit.price != 0 %>
-      <p class="m-1"><a class="btn btn-light booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal"  role="button">BOOK</a>
+      <p class="m-1"><a class="btn btn-light booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal" role="button">BOOK</a></p>
     <% end %>
+
        <!-- AddEvent button -->
     <div class="addeventatc my-3" data-styling="none">
       <div class="date">
@@ -26,7 +39,6 @@
         <span class="location"><%= @exhibit.museum.address %></span>
         <span class="organizer"><%= @exhibit.museum.name %></span>
     </div>
-
   </div>
 
   <div id="image-carousel" class="carousel slide" data-ride="carousel">
@@ -121,14 +133,17 @@
     </div>
     <div class="exhibit-show-info-2">
       <h2 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h2>
+
       <% if @exhibit.price == 0 %>
         <h3 class="my-3">Free!</h3>
       <% else %>
         <h3 class="m-1">£<%= @exhibit.price %></h3>
       <% end %>
+
       <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
         <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
     </div>
+
     <div class="exhibit-show-card-basic">
       <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>">
     </div>
