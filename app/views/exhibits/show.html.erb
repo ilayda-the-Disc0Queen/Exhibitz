@@ -83,7 +83,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Book for <strong> <%= @exhibit.name %> </strong> </h5>
+          <h5 class="modal-title" id="exampleModalLabel">Book for <strong> <%= @exhibit.name.upcase %></strong> </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -106,7 +106,7 @@
             <% end %>
         </div>
          <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" href="museum_path(@exhibit.museum)" data-dismiss="modal">Close</button>
           <%# <button type="button" class="btn btn-primary">Add to My Bookings</button> %>
         </div>
       </div>

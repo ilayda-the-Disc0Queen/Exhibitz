@@ -1,0 +1,21 @@
+<div class="my-bookings-banner"><h1>Booking Confirmation</h1></div>
+<div class="container">
+  <h1 class="booking-details-title">Booking Details:</h1>
+</div>
+<div class="container">
+  <div class="my-bookings-card">
+    <%= image_tag @booking.exhibit.image, class: "my-bookings-image" %>
+    <div class="my-bookings-details">
+      <div></div>
+      <div>
+        <h2 class="details-name"><%= link_to @booking.exhibit.name, exhibit_path(@booking.exhibit) %></h2>
+      </div>
+      <div class="booking-info">
+        <p><%= @booking.date %></p>
+        <p class="details-location"><strong>@ </strong><%= link_to @booking.exhibit.museum.name, museum_path(@booking.exhibit.museum) %></p></p>
+        <p>£<%= @booking.exhibit.price %></p>
+      </div>   
+    </div>
+  </div>
+
+</div>
