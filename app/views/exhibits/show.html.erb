@@ -113,23 +113,23 @@
     </div>
   </div>
 
-  <div class="ft-artist-card mx-4">
-    <div class="ft-artist-card-info" style="width: 50%; margin: 20px 20px;" >
+  <div class="exhibit-show-info-card mx-4">
+    <div class="exhibit-show-info-1">
       <h2>About the artist</h2>
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
       <p><%= @exhibit.artists.first.info %></p>
     </div>
-    <div class="ft-artist-card-info" style="width: 25%; background-color: #f1f1f1; margin: 20px 0px;">
+    <div class="exhibit-show-info-2">
       <h2 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h2>
       <% if @exhibit.price == 0 %>
         <h3 class="my-3">Free!</h3>
       <% else %>
         <h3 class="m-1">£<%= @exhibit.price %></h3>
       <% end %>
-      <h3 style="font-size: 1.5rem;"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
+      <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
         <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
     </div>
-    <div id="ex_show_artist_card" class="ft-artist-card-info" style="width:30%;" >
-      <img src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>" style="height: 100%; object-fit: cover;">
+    <div class="exhibit-show-card-basic">
+      <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>">
     </div>
   </div>
