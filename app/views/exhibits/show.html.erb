@@ -123,7 +123,7 @@
       <p><%= @exhibit.artists.first.info.truncate(240) %></p>
     </div>
     <div class="exhibit-show-info-2">
-      <h3 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
+      <h4 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h4>
       <% if @exhibit.price == 0 %>
         <h4 class="my-3">Free!</h4>
       <% else %>
