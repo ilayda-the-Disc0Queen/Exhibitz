@@ -69,6 +69,7 @@
 
 .details-location {
   font-size: 20px;
+  padding-bottom: 0px;
 }
 
 #message {
@@ -83,8 +84,36 @@
   text-decoration: none;
 }
 .pound {
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .numbers {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.booking-info {
+  display: flex;
+  margin-top: 0;
+  padding-top: 10px;
+  background: rgb(247, 247, 247);
+  padding-bottom: 10px;
+  margin-bottom: 16px; 
+
+}
+.labels {
+  text-align: right;
+  padding-left: 40px;
+  margin-bottom: 0px;
+  margin-right: 0;
+}
+
+.values {
+  text-align: left;
+  float: left;
+  padding-right: 100px;
+  margin-bottom: 0px;
+  margin-left: 0;
+  font-weight: bold;
+}
+ .date-museum {
+
+ }
