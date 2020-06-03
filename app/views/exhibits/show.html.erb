@@ -120,14 +120,14 @@
       <p><%= @exhibit.artists.first.info.truncate(240) %></p>
     </div>
     <div class="exhibit-show-info-2">
-      <h2 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h2>
+      <h3 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h3>
       <% if @exhibit.price == 0 %>
-        <h3 class="my-3">Free!</h3>
+        <h4 class="my-3">Free!</h4>
       <% else %>
-        <h3 class="m-1">£<%= @exhibit.price %></h3>
+        <h4 class="m-1">£<%= @exhibit.price %></h4>
       <% end %>
-      <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
-        <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
+      <h4 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
+        <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h4>
     </div>
     <div class="exhibit-show-card-basic">
       <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>">
