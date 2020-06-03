@@ -1,21 +1,58 @@
-<div class="my-bookings-banner"><h1>Booking Confirmation</h1></div>
+<div class="booking-confirmation-banner"><h1>Booking Confirmation</h1></div>
+
+<%# <div class="container">
+  <h1 class="booking-details-title">Booking Details</h1>
+</div> %>
+
 <div class="container">
-  <h1 class="booking-details-title">Booking Details:</h1>
-</div>
-<div class="container">
-  <div class="my-bookings-card">
-    <%= image_tag @booking.exhibit.image, class: "my-bookings-image" %>
+  <div class="booking-confirmation-card">
+    <%= image_tag @booking.exhibit.image, class: "booking-image" %>
     <div class="my-bookings-details">
-      <div></div>
-      <div>
-        <h2 class="details-name"><%= link_to @booking.exhibit.name, exhibit_path(@booking.exhibit) %></h2>
+      <div class="exhibit-name">
+        <div class="name">
+          <h2 class="details-name"><%= link_to @booking.exhibit.name, exhibit_path(@booking.exhibit) %></h2>
+        </div>
       </div>
-      <div class="booking-info">
-        <p><%= @booking.date %></p>
-        <p class="details-location"><strong>@ </strong><%= link_to @booking.exhibit.museum.name, museum_path(@booking.exhibit.museum) %></p></p>
-        <p>£<%= @booking.exhibit.price %></p>
-      </div>   
+
+      <div class="date-museum">
+        <div class="lebel"><p><%= @booking.date.strftime("%m/%d/%Y") %></p></div>
+        <div><p class="details-location"><%= link_to @booking.exhibit.museum.name, museum_path(@booking.exhibit.museum) %></p></div>
+      </div>
+
+      <div class="exhibit-name">
+        <div></div>
+        <div class="label">
+          <p>Number of tickets: </p>
+        </div>
+        <div class="name">
+          <h4 class="pound numbers"><%= @booking.number_of_tickets %></h4>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="exhibit-name">
+        <div></div>
+        <div class="label">
+          <p>Booking total: </p>
+        </div>
+        <div class="tickets">
+          <div><h4 class="pound numbers">£</h4></div>
+          <div><h4 class="pound numbers"><%= (@booking.exhibit.price * @booking.number_of_tickets) %></h4></div>
+        </div>
+        <div></div>
+      </div>
+
+      
     </div>
   </div>
-
+</div>
+<div class="container">
+  <div class="nav-buttons">
+    <button type="button" class="btn btn-outline-dark">
+          <%= link_to "Back to exhibit", exhibit_path(@booking.exhibit), class:"buttonnav" %>
+    </button>
+    <button  type="button" class="btn btn-outline-dark">
+          <%= link_to "All exhibits", exhibits_path, class:"buttonnav" %>
+    </button>
+  </div>
 </div>
