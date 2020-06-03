@@ -10,7 +10,7 @@ class FavouritesController < ApplicationController
     @favourite.user = current_user
 
     if @favourite.save
-      redirect_to exhibits_path(anchor: "recommendations")
+      redirect_back(fallback: '/exhibits')
     else
       render 'exhibits/index'
     end
@@ -19,6 +19,6 @@ class FavouritesController < ApplicationController
   def destroy
     @favourite = Favourite.find(params[:id])
     @favourite.destroy
-    redirect_to exhibits_path(anchor: "recommendations")
+    redirect_back(fallback: '/exhibits')
   end
 end
