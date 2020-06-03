@@ -113,7 +113,7 @@
     </div>
   </div>
 
-  <div class="exhibit-show-info-card mx-4">
+  <div class="exhibit-show-info-card d-flex justify-content-between">
     <div class="exhibit-show-info-1">
       <h2>About the artist</h2>
       <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
@@ -129,7 +129,7 @@
       <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
         <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
     </div>
-    <div class="exhibit-show-card-basic">
-      <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>">
-    </div>
+    <!-- <div class="exhibit-show-card-basic"> -->
+      <!-- <img class="exhibit-show-card-image" src="<%= @exhibit.museum.image %>" alt="<%= @exhibit.museum.name %>"> -->
+    <!-- </div> -->
   </div>
