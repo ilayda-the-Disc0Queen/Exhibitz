@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :index]
     resources :favourites, only: [:create]
   end
-  resources :bookings, except: [:create]
+  resources :bookings, except: [:create] do 
+     get "confirmation", to: "bookings#confirmation"
+  end
   resources :artists, only: [:index, :show]
   resources :museums, only: [:index, :show]
   get "locations", to: "pages#locations"

@@ -23,12 +23,18 @@ class BookingsController < ApplicationController
         # respond_to do |format|
         #   format.js {render "success.js.erb"}
         # end
-        render :success
+        redirect_to booking_confirmation_path(@booking)
       else
         # render :error
       end
     end
   end
+
+  def confirmation
+    @booking = Booking.find(params[:booking_id])
+    
+  end
+  
 
   private
 

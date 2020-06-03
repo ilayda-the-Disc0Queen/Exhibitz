@@ -1,0 +1,60 @@
+.booking-details-title {
+margin: 32px 0;
+font-family: 'AvenirBlack',sans-serif;
+text-align: center;
+}
+
+.booking-confirmation-banner {
+  padding: 140px 0;
+  border: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1591100566/deanna-j-3GZlhROZIQg-unsplash_uo1yf4.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 200px;
+  margin-bottom: 80px;
+}
+
+.booking-confirmation-banner h1 {
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // font-weight: bolder;
+  // font-size: calc(44px + 16 * ((100vw - 400px) / 1000));
+}
+.label{
+ text-align: right;
+}
+
+.booking-confirmation-card {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 60px;
+  height: 300px;
+}
+
+.booking-image {
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
+}
+.exhibit-name {
+  display: flex;
+  justify-content: space-around;;
+}
+
+.tickets {
+  display: flex;
+}
+
+.date-museum {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
