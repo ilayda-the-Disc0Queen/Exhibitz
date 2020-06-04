@@ -23,10 +23,9 @@
 
     <h4>Current exhibitions:</h4>
 
-    <div class="exhibits-title"></div>
     <div class="exhibits">
       <% @museum.exhibits.each do  |exhibit| %>
-        <div class="exhibit-card">
+                <div class="exhibit-card">
           <div class="exhibit-image">
             <%= link_to image_tag(exhibit.image), exhibit_path(exhibit) %>
           </div>
@@ -35,12 +34,21 @@
             <div class="exhibit-info-name">
               <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
             </div>
-
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
-              <p class="m-1"><%= link_to exhibit.museum.name, exhibit.museum.website %></p>
-              <p class="m-1">              </p>
+              <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
+              <div class="heart-hover">
+                <% if exhibit.favourites.exists? %>
+                  <%= link_to favourite_path(exhibit.favourites.first), remote: true, method: :delete, class: "heart" do %>
+                    <%= image_tag "https://image.flaticon.com/icons/png/512/1077/1077086.png".html_safe, alt: "all" %>
+                  <% end %>
+                <% else  %>
+                  <%= link_to exhibit_favourites_path(exhibit), remote: true, method: :post, class: "heart" do %>
+                    <%= image_tag "https://image.flaticon.com/icons/png/512/1077/1077035.png".html_safe, alt: "all" %>
+                  <% end %>
+                <% end %>
+              </div>
             </div>
 
             <div class="exhibit-info-right">
