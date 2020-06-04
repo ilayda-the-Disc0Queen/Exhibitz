@@ -1,6 +1,7 @@
 <div class="exhibitsbook d-flex justify-content-between">
   <div class="exhibits_info_book">
     <h1 style="text-align: center; font-size: 50px;"><%= @exhibit.name %></h1>
+
     <div class="heart-hover">
       <% if @exhibit.favourites.exists? %>
         <%= link_to favourite_path(@exhibit.favourites.first), remote: true, method: :delete, class: "heart" do %>
@@ -14,7 +15,7 @@
     </div>
 
     <% if @exhibit.price != 0 %>
-      <p class="m-1"><a class="btn btn-light booking-button" id="exhbookbutton" type="button" data-toggle="modal" data-target="#exampleModal" role="button">BOOK</a></p>
+      <p class="m-1"><a class="btn btn-light bg-white booking-button" type="button" data-toggle="modal" data-target="#exampleModal" role="button">BOOK</a></p>
     <% end %>
 
        <!-- AddEvent button -->
@@ -105,8 +106,8 @@
         </div>
         <div class="modal-body">
             <%= simple_form_for [ @exhibit, @booking ], remote: true do |f| %>
-              <h5>Start: <strong> <%=  @exhibit.start_date %> </strong> </h5>
-              <h5>Close: <strong> <%=  @exhibit.close_date %> </strong> </h5>
+              <h5>Start: <strong> <%= @exhibit.start_date.to_date.strftime("%d/%b/%y") %> </strong> </h5>
+              <h5>Close: <strong> <%=  @exhibit.close_date.to_date.strftime("%d/%b/%y") %> </strong> </h5>
               <%= f.input :number_of_tickets %>
               <%= f.input :date, as: :date, html5: true %>
               <h5>Make your payment</h5>
@@ -139,13 +140,14 @@
 
 
       <% if @exhibit.price == 0 %>
-        <h4 class="my-3">No need to book - it's free!</h4>
+      <p></p>
+        <h3>No need to book - it's free!</h3>
       <% else %>
-        <h4>£<%= @exhibit.price %></h4>
+      <p></p>
+        <h3>£<%= @exhibit.price %></h3>
       <% end %>
 
-      <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
-        <%= DateTime.parse(@exhibit.close_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.close_date).month]%></h3>
+      <h3 class="exhibit-show-info-h3"> <%= @exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= @exhibit.close_date.to_date.strftime("%d/%b/%y") %></h3>
 
     </div>
 
