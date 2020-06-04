@@ -13,10 +13,10 @@
       <p>See their work in the exhibit "<%= @artist.exhibits.first.name %>", now showing at the <%= @artist.exhibits.first.museum.name %>from <%= @artist.exhibits.first.start_date %> to <%= @artist.exhibits.first.close_date %>.</p>
       <div class="d-flex justify-content-center mb-3">
         <button type="button" class="btn btn-outline-dark mr-1">
-          <%= link_to "View exhibit", exhibit_path(@artist.exhibits.first) %>
+          <%= link_to "View exhibit", exhibit_path(@artist.exhibits.first), class:"buttonnav" %>
         </button>
         <button type="button" class="btn btn-outline-dark">
-          <%= link_to "All exhibits", exhibits_path %>
+          <%= link_to "All exhibits", exhibits_path, class:"buttonnav" %>
         </button>
       </div>
     </div>
