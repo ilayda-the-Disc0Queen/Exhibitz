@@ -14,10 +14,10 @@
                 <h2 class="details-name"><%= link_to booking.exhibit.name, exhibit_path(booking.exhibit) %></h2>
               </div>
               <div class="booking-info">
-                <p><%= booking.date.strftime("%m/%d/%Y") %></p>
-                <p class="details-location"><strong>@ </strong><%= link_to booking.exhibit.museum.name, museum_path(booking.exhibit.museum) %></p></p>
+                <p><%= booking.date.strftime("%d/%m/%Y") %></p>
+                <p class="details-location"><strong> </strong><%= link_to booking.exhibit.museum.name, museum_path(booking.exhibit.museum) %></p></p>
                 <p>£<%= booking.exhibit.price %></p>
-              </div>   
+              </div>
             </div>
           </div>
         <% end %>

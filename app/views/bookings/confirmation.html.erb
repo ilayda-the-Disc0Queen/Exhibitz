@@ -25,12 +25,12 @@
         </div>
 
         <div class="values">
-          <p class="pound numbers"><%= @booking.date.strftime("%m/%d/%Y") %></p>
+          <p class="pound numbers"><%= @booking.date.strftime("%d/%m/%Y") %></p>
           <p class="pound numbers"><%= @booking.number_of_tickets %></p>
           <p class="pound numbers">£<%= (@booking.exhibit.price * @booking.number_of_tickets) %></p>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
