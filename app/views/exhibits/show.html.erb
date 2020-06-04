@@ -28,7 +28,7 @@
       <div class="desc">
         <p>
           <strong class="hed"><%= @exhibit.name %></strong>
-          <span class="des"><%= @exhibit.museum.name %><br />Click to save and send to friends!</span>
+          <span class="des"><%= @exhibit.museum.name %><br/>Click to save and send to friends!</span>
         </p>
       </div>
       <span class="start"><%=  @my_booking.present? ? @my_booking.date : Date.today %> 01:00 PM</span> <!-- change to :date, as: :date, html5: true -->
@@ -139,7 +139,7 @@
 
 
       <% if @exhibit.price == 0 %>
-        <h4 class="my-3">Free!</h4>
+        <h4 class="my-3">No need to book - it's free!</h4>
       <% else %>
         <h4 class="m-1">£<%= @exhibit.price %></h4>
       <% end %>
