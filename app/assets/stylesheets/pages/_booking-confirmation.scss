@@ -1,18 +1,18 @@
 .booking-details-title {
 margin: 32px 0;
-font-family: 'AvenirBlack',sans-serif;
+// font-family: 'AvenirBlack',sans-serif;
 text-align: center;
 }
 
 .booking-confirmation-banner {
-  padding: 140px 0;
+  padding: 150px 0;
   border: 0;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dofvu2msx/image/upload/v1591100566/deanna-j-3GZlhROZIQg-unsplash_uo1yf4.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  height: 200px;
+  // height: 200px;
   margin-bottom: 80px;
 }
 
@@ -57,4 +57,5 @@ text-align: center;
 .nav-buttons {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 }
