@@ -141,7 +141,7 @@
       <% if @exhibit.price == 0 %>
         <h4 class="my-3">No need to book - it's free!</h4>
       <% else %>
-        <h4 class="m-1">£<%= @exhibit.price %></h4>
+        <h4>£<%= @exhibit.price %></h4>
       <% end %>
 
       <h3 class="exhibit-show-info-h3"><%= DateTime.parse(@exhibit.start_date).day %> <%= I18n.t("date.abbr_month_names")[DateTime.parse(@exhibit.start_date).month]%> -
