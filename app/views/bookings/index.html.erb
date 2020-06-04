@@ -15,9 +15,9 @@
               </div>
               <div class="booking-info">
                 <p><%= booking.date %></p>
-                <p class="details-location"><strong>@ </strong><%= link_to booking.exhibit.museum.name, museum_path(booking.exhibit.museum) %></p></p>
+                <p class="details-location"><strong> </strong><%= link_to booking.exhibit.museum.name, museum_path(booking.exhibit.museum) %></p></p>
                 <p>£<%= booking.exhibit.price %></p>
-              </div>   
+              </div>
             </div>
           </div>
         <% end %>
