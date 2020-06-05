@@ -131,23 +131,23 @@
 
   <div class="exhibit-show-info-card d-flex justify-content-between">
     <div class="exhibit-show-info-1">
-      <h2>About the artist</h2>
-      <h3><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h3>
+      <h3><center>About the artist</center></h3>
+      <h5><%= link_to @exhibit.artists.first.name, artist_path(@exhibit.artists.first) %></h5>
       <p><%= @exhibit.artists.first.info.truncate(240) %></p>
     </div>
     <div class="exhibit-show-info-2">
-      <h2 class="m-1"><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></h2>
+      <h2><center><%= link_to @exhibit.museum.name, museum_path(@exhibit.museum) %></center></h2>
 
 
       <% if @exhibit.price == 0 %>
       <p></p>
-        <h3>No need to book - it's free!</h3>
+        <h5 exhibit-show-info-h3>No need to book - it's free!</h5>
       <% else %>
       <p></p>
-        <h3>£<%= @exhibit.price %></h3>
+        <h5 exhibit-show-info-h3>£<%= @exhibit.price %></h5>
       <% end %>
 
-      <h3 class="exhibit-show-info-h3"> <%= @exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= @exhibit.close_date.to_date.strftime("%d/%b/%y") %></h3>
+      <h5 class="exhibit-show-info-h5"> <%= @exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= @exhibit.close_date.to_date.strftime("%d/%b/%y") %></h5>
 
     </div>
 

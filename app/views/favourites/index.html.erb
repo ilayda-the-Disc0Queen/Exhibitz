@@ -32,7 +32,7 @@
               <% else %>
                 <p class="m-1">£<%= favourite.exhibit.price %></p>
               <% end %>
-              <p><%= exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= exhibit.close_date.to_date.strftime("%d/%b/%y") %></p>
+              <p><%= favourite.exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= favourite.exhibit.close_date.to_date.strftime("%d/%b/%y") %></p>
             </div>
 
           </div>

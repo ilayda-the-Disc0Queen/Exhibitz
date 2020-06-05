@@ -78,7 +78,7 @@
 
 <h2 class="subtitles">All Exhibits</h2>
 
-  <div class="exhibits">
+    <div class="exhibits">
 
       <% @exhibits.each do |exhibit| %>
 
@@ -91,12 +91,10 @@
             <div class="exhibit-info-name">
               <h5><%= link_to exhibit.name, exhibit_path(exhibit) %></h5>
             </div>
-
             <hr width="50%" size="10" color="black">
 
             <div class="exhibit-info-left">
               <p class="m-1"><%= link_to exhibit.museum.name, museum_path(exhibit.museum) %></p>
-
               <div class="heart-hover">
                 <% if exhibit.favourites.exists? %>
                   <%= link_to favourite_path(exhibit.favourites.first), remote: true, method: :delete, class: "heart" do %>
@@ -116,14 +114,14 @@
               <% else %>
                 <p class="m-1">£<%= exhibit.price %></p>
               <% end %>
-              <p><%= exhibit.start_date %> - <%= exhibit.close_date %></p>
+              <p><%= exhibit.start_date.to_date.strftime("%d/%b/%y") %> - <%= exhibit.close_date.to_date.strftime("%d/%b/%y") %></p>
             </div>
 
           </div>
 
         </div>
 
-    <% end %>
-</div>
+      <% end %>
+    </div>
 
 
